@@ -1,0 +1,83 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: :9090
+
+
+
+proxy-providers:
+  suying666:
+    type: http
+    path: ./profiles/suying666.yaml
+    url: https://dingyue.suying666.info/link/LVmYuni3MHvPgmkN?clash=1
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+
+
+
+proxy-groups: 
+  - name: PROXY
+    type: select
+    use:
+      - suying666
+
+
+
+rule-providers:
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
+    path: ./ruleset/lancidr.yaml
+    interval: 86400
+
+  private:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
+    path: ./ruleset/private.yaml
+    interval: 86400
+
+  reject:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+    path: ./ruleset/reject.yaml
+    interval: 86400
+
+  clash_rule_REJECT:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ArsenicX/script/main/clash_rule_REJECT.txt"
+    path: ./ruleset/clash_rule_REJECT.yaml
+    interval: 86400
+
+  direct:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
+    path: ./ruleset/direct.yaml
+    interval: 86400
+
+  clash_rule_DIRECT:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ArsenicX/script/main/clash_rule_DIRECT.yaml"
+    path: ./ruleset/clash_rule_DIRECT.yaml
+    interval: 86400
+
+
+rules:
+  - RULE-SET,lancidr,DIRECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,reject,REJECT
+  - RULE-SET,clash_rule_REJECT,REJECT
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,clash_rule_DIRECT,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,PROXY
