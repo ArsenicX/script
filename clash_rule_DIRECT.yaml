@@ -1,0 +1,9 @@
+payload:
+# Spotify
+  - DOMAIN-SUFFIX,scdn.co
+  - DOMAIN-KEYWORD,spotify
+
+  - DOMAIN-KEYWORD,sonkwo
+  - DOMAIN-SUFFIX,store.steampowered.com
+  - DOMAIN-KEYWORD,suying666
+  - IP-CIDR,172.18.254.245/24
