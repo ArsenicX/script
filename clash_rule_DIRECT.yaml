@@ -1,6 +1,7 @@
 payload:
 # Spotify
-  - DOMAIN-SUFFIX,scdn.co
+  - DOMAIN-SUFFIX,audio-ak-spotify-com.akamaized.net
+  - DOMAIN-SUFFIX,audio-ake.spotify.com.edgesuite.net
   - DOMAIN-KEYWORD,spotify
 
   - DOMAIN-KEYWORD,sonkwo
