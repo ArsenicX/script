@@ -1,12 +1,12 @@
 payload:
 # Spotify
- - DOMAIN-SUFFIX,audio-ak-spotify-com.akamaized.net, DIRECT
- - DOMAIN-SUFFIX,audio-ake.spotify.com.edgesuite.net, DIRECT
- - DOMAIN-SUFFIX,spoti.fi, PROXY
- - DOMAIN-SUFFIX,spotify.com, PROXY
- - DOMAIN-KEYWORD,-spotify-com, PROXY
- - DOMAIN-KEYWORD,spotify.com, PROXY
- - DOMAIN-KEYWORD,spotify, PROXY
+ - DOMAIN-SUFFIX,audio-ak-spotify-com.akamaized.net
+ - DOMAIN-SUFFIX,audio-ake.spotify.com.edgesuite.net
+ - DOMAIN-SUFFIX,spoti.fi
+ - DOMAIN-SUFFIX,spotify.com
+ - DOMAIN-KEYWORD,-spotify-com
+ - DOMAIN-KEYWORD,spotify.com
+ - DOMAIN-KEYWORD,spotify
  
  
  - DOMAIN-KEYWORD,sonkwo
