@@ -1,3 +1,5 @@
 payload:
 # Spotify
-  - DOMAIN-SUFFIX,wg.spotify.com
+  - DOMAIN-SUFFIX,spclient.wg.spotify.com
+  
+  
