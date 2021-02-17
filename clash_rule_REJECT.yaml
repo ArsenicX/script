@@ -1,0 +1,5 @@
+payload:
+# Spotify
+ - DOMAIN-SUFFIX,pixel-static.spotify.com,REJECT
+ - DOMAIN-SUFFIX,pixel.spotify.com,REJECT
+ - DOMAIN-SUFFIX,spclient.wg.spotify.com

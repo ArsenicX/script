@@ -1,5 +1,0 @@
-payload:
-# Spotify
-  - DOMAIN-SUFFIX,spclient.wg.spotify.com
-  
-  
