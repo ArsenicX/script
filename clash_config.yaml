@@ -5,24 +5,54 @@ mode: Rule
 log-level: info
 external-controller: :9090
 
+proxies:
+  - {"name":"V4-中转9999|广港-新加坡|x2.5|V2ray","type":"vmess","server":"linode-zy.ddns-only.xyz","port":51196,"uuid":"d1eecbbb-c536-3d5e-afdb-28f7a427c042","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/v2ray","ws-headers":{"Host":"linode-zy.ddns-only.xyz"}}
+
 
 proxy-providers:
-  suying666:
+  j01.best:
     type: http
-    path: ./profiles/suying666.yaml
-    url: XXXXXXXXXXXXX
-    interval: 3600
+    path: ./profiles/j01.best.yaml
+    url: https://suo.yt/iW2xFyv
+    interval: 18000
     health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
+        enable: true
+        url: http://www.gstatic.com/generate_204
+        interval: 300
+# 订阅链接转换：
+## 地址：https://bianyuan.xyz/
+## Exclude：(\d\d\.|I\.|I\+|过期)
+## 原始v2ray链接：https://j03.space/link/jvypUv7tZqyFBtC5?sub=3
 
 
 proxy-groups: 
   - name: PROXY
     type: select
+    proxies:
+      - V4-中转9999|广港-新加坡|x2.5|V2ray
+      - url-test-auto
+      - fallback-auto
     use:
-      - suying666
+      - j01.best
+
+# 自动选择最低延迟服务器
+  - name: url-test-auto
+    type: url-test
+    use:
+      - j01.best
+    tolerance: 150
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+
+# 按照用户书写的服务器顺序，在确保服务器可用的情况下，自动选择服务器
+  - name: fallback-auto
+    type: fallback
+    use:
+      - j01.best
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+
+
 
 
 rule-providers:
@@ -33,11 +63,18 @@ rule-providers:
     path: ./ruleset/reject.yaml
     interval: 86400
 
-  clash_rule_REJECT:
+  lancidr:
     type: http
-    behavior: classical
-    url: "https://raw.githubusercontent.com/ArsenicX/script/main/clash_rule_REJECT.txt"
-    path: ./ruleset/clash_rule_REJECT.yaml
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
+    path: ./ruleset/lancidr.yaml
+    interval: 86400
+
+  private:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
+    path: ./ruleset/private.yaml
     interval: 86400
 
   direct:
@@ -47,20 +84,27 @@ rule-providers:
     path: ./ruleset/direct.yaml
     interval: 86400
 
-  clash_rule_DIRECT:
-    type: http
-    behavior: classical
-    url: "https://raw.githubusercontent.com/ArsenicX/script/main/clash_rule_DIRECT.yaml"
-    path: ./ruleset/clash_rule_DIRECT.yaml
-    interval: 86400
-
 
 rules:
-  - RULE-SET,lancidr,DIRECT
-  - RULE-SET,private,DIRECT
-  - RULE-SET,reject,REJECT
-  - RULE-SET,clash_rule_REJECT,REJECT
-  - RULE-SET,direct,DIRECT
-  - RULE-SET,clash_rule_DIRECT,DIRECT
-  - GEOIP,CN,DIRECT
-  - MATCH,PROXY
+# - DOMAIN,spclient.wg.spotify.com, DIRECT
+# - DOMAIN-SUFFIX,wg.spotify.com, REJECT
+
+# Spotiy
+ - DOMAIN-SUFFIX,audio-ak-spotify-com.akamaized.net, DIRECT
+ - DOMAIN-SUFFIX,audio-ake.spotify.com.edgesuite.net, DIRECT
+ - DOMAIN-SUFFIX,i.scdn.co, DIRECT
+ - DOMAIN,spclient.wg.spotify.com, REJECT
+
+
+# My Rules
+ - RULE-SET,reject,REJECT
+ - DOMAIN-SUFFIX,access-sngapm.qcloud.com , REJECT
+
+ - RULE-SET,lancidr,DIRECT
+ - RULE-SET,private,DIRECT
+ - RULE-SET,direct,DIRECT
+ - DOMAIN-SUFFIX,store.steampowered.com,DIRECT
+ - IP-CIDR,172.18.254.245/24, DIRECT
+ - GEOIP,CN,DIRECT
+
+ - MATCH,PROXY
