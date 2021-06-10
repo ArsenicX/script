@@ -1,5 +1,0 @@
-payload:
-# Spotify
- - DOMAIN-SUFFIX,pixel-static.spotify.com
- - DOMAIN-SUFFIX,pixel.spotify.com
- - DOMAIN-SUFFIX,spclient.wg.spoti???fy.com
