@@ -92,7 +92,7 @@ rules:
 # Spotiy
  - DOMAIN-SUFFIX,audio-ak-spotify-com.akamaized.net, DIRECT
  - DOMAIN-SUFFIX,audio-ake.spotify.com.edgesuite.net, DIRECT
- - DOMAIN-SUFFIX,i.scdn.co, DIRECT
+ - DOMAIN-SUFFIX,scdn.co, DIRECT
  - DOMAIN,spclient.wg.spotify.com, REJECT
 
 
