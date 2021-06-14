@@ -2,7 +2,7 @@
 mixed-port: 7890
 allow-lan: false
 mode: Rule
-log-level: warning
+log-level: info
 external-controller: :9090
 
 proxies:
