@@ -41,7 +41,6 @@ proxy-groups:
     type: url-test
     use:
       - j01.best
-    tolerance: 150
     url: 'http://www.gstatic.com/generate_204'
     interval: 1800
     tolerance: 100
