@@ -14,11 +14,11 @@ proxy-providers:
     type: http
     path: ./profiles/j01.best.yaml
     url: https://suo.yt/hdShNIS
-    interval: 18000
+    interval: 43200
     health-check:
         enable: true
         url: http://www.gstatic.com/generate_204
-        interval: 300
+        interval: 1800
 # 订阅链接转换：
 ## 地址：https://bianyuan.xyz/
 ## Exclude：(\d\d\.|I\.|I\+|过期)
@@ -35,6 +35,7 @@ proxy-groups:
     use:
       - j01.best
 
+# interval 单位为s
 # 自动选择最低延迟服务器
   - name: url-test-auto
     type: url-test
@@ -42,7 +43,8 @@ proxy-groups:
       - j01.best
     tolerance: 150
     url: 'http://www.gstatic.com/generate_204'
-    interval: 300
+    interval: 1800
+    tolerance: 100
 
 # 按照用户书写的服务器顺序，在确保服务器可用的情况下，自动选择服务器
   - name: fallback-auto
@@ -50,7 +52,7 @@ proxy-groups:
     use:
       - j01.best
     url: 'http://www.gstatic.com/generate_204'
-    interval: 300
+    interval: 1800
 
 
 
@@ -61,40 +63,36 @@ rule-providers:
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
     path: ./ruleset/reject.yaml
-    interval: 86400
+    interval: 43200
 
   lancidr:
     type: http
     behavior: ipcidr
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
     path: ./ruleset/lancidr.yaml
-    interval: 86400
+    interval: 43200
 
   private:
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
     path: ./ruleset/private.yaml
-    interval: 86400
+    interval: 43200
 
   direct:
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
     path: ./ruleset/direct.yaml
-    interval: 86400
+    interval: 43200
 
 
 rules:
-# - DOMAIN,spclient.wg.spotify.com, DIRECT
-# - DOMAIN-SUFFIX,wg.spotify.com, REJECT
-
 # Spotiy
  - DOMAIN-SUFFIX,audio-ak-spotify-com.akamaized.net, DIRECT
  - DOMAIN-SUFFIX,audio-ake.spotify.com.edgesuite.net, DIRECT
  - DOMAIN-SUFFIX,scdn.co, DIRECT
  - DOMAIN,spclient.wg.spotify.com, REJECT
-
 
 # My Rules
  - RULE-SET,reject,REJECT
