@@ -63,6 +63,13 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
     path: ./ruleset/reject.yaml
     interval: 43200
+    
+  reject_anti-AD:
+    type: http
+    behavior: domain
+    url: "https://anti-ad.net/clash.yaml"
+    path: ./ruleset/reject_anti-AD.yaml
+    interval: 43200    
 
   lancidr:
     type: http
@@ -95,6 +102,7 @@ rules:
 
 # My Rules
  - RULE-SET,reject,REJECT
+ - RULE-SET,reject_anti-AD,REJECT
  - DOMAIN-SUFFIX,access-sngapm.qcloud.com , REJECT
 
  - RULE-SET,lancidr,DIRECT
