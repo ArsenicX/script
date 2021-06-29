@@ -95,15 +95,16 @@ rule-providers:
 
 rules:
 # Spotiy
- - DOMAIN-SUFFIX,audio-ak-spotify-com.akamaized.net, DIRECT
- - DOMAIN-SUFFIX,audio-ake.spotify.com.edgesuite.net, DIRECT
- - DOMAIN-SUFFIX,scdn.co, DIRECT
- - DOMAIN,spclient.wg.spotify.com, REJECT
+ - DOMAIN-SUFFIX,audio-ak-spotify-com.akamaized.net,DIRECT
+ - DOMAIN-SUFFIX,audio-ake.spotify.com.edgesuite.net,DIRECT
+ - DOMAIN-SUFFIX,scdn.co,DIRECT
+ - DOMAIN,spclient.wg.spotify.com,REJECT
 
 # My Rules
+ - DOMAIN-SUFFIX,al.p2p.huya.com,REJECT
  - RULE-SET,reject,REJECT
  - RULE-SET,reject_anti-AD,REJECT
- - DOMAIN-SUFFIX,access-sngapm.qcloud.com , REJECT
+ - DOMAIN-SUFFIX,access-sngapm.qcloud.com,REJECT
 
  - RULE-SET,lancidr,DIRECT
  - RULE-SET,private,DIRECT
