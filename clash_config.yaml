@@ -101,7 +101,7 @@ rules:
  - DOMAIN,spclient.wg.spotify.com,REJECT
 
 # My Rules
- - DOMAIN-SUFFIX,al.p2p.huya.com,REJECT
+ - DOMAIN-SUFFIX,al.p2p.huya.com,DIRECT
  - RULE-SET,reject,REJECT
  - RULE-SET,reject_anti-AD,REJECT
  - DOMAIN-SUFFIX,access-sngapm.qcloud.com,REJECT
