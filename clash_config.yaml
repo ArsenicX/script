@@ -102,6 +102,9 @@ rules:
 
 # My Rules
  - DOMAIN-SUFFIX,al.p2p.huya.com,DIRECT
+ - DOMAIN-SUFFIX,gleam.io,DIRECT
+
+ 
  - RULE-SET,reject,REJECT
  - RULE-SET,reject_anti-AD,REJECT
  - DOMAIN-SUFFIX,access-sngapm.qcloud.com,REJECT
