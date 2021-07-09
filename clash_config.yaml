@@ -62,28 +62,28 @@ rule-providers:
     type: http
     behavior: ipcidr
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
-    path: ./ruleset/lancidr.yaml
+    path: ./RuleSet/lancidr.yaml
     interval: 86400
 
   private:
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
-    path: ./ruleset/private.yaml
+    path: ./RuleSet/private.yaml
     interval: 86400
 
   reject:
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
-    path: ./ruleset/reject.yaml
+    path: ./RuleSet/reject.yaml
     interval: 86400
     
   reject_anti-AD:
     type: http
     behavior: domain
     url: "https://anti-ad.net/clash.yaml"
-    path: ./ruleset/reject_anti-AD.yaml
+    path: ./RuleSet/reject_anti-AD.yaml
     interval: 86400
     
   Unbreak:
@@ -97,7 +97,7 @@ rule-providers:
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
-    path: ./ruleset/direct.yaml
+    path: ./RuleSet/direct.yaml
     interval: 86400
 
   China:
@@ -110,26 +110,28 @@ rule-providers:
   ChinaIP:
     type: http
     behavior: ipcidr
-    path: ./RuleSet/Extra/ChinaIP.yaml
+    path: ./RuleSet/ChinaIP.yaml
     url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/ChinaIP.yaml
     interval: 86400
     
   AdvertisingTest:
     type: http
     behavior: classical
-    path: ./RuleSet/Extra/ChinaIP.yaml
+    path: ./RuleSet/AdvertisingTest.yaml
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingTest/AdvertisingTest.yaml
     interval: 86400
 
   AdvertisingTest_Classical:
     type: http
     behavior: classical
+    path: ./RuleSet/AdvertisingTest_Classical.yaml
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingTest/AdvertisingTest_Classical.yaml
     interval: 86400
-    
-   AdvertisingTest_Domain:
+
+  AdvertisingTest_Domain:
     type: http
     behavior: domain
+    path: ./RuleSet/AdvertisingTest_Domain.yaml
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingTest/AdvertisingTest_Domain.yaml
     interval: 86400   
 
