@@ -57,63 +57,88 @@ proxy-groups:
 
 
 rule-providers:
-  reject:
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
-    path: ./ruleset/reject.yaml
-    interval: 43200
-    
-  reject_anti-AD:
-    type: http
-    behavior: domain
-    url: "https://anti-ad.net/clash.yaml"
-    path: ./ruleset/reject_anti-AD.yaml
-    interval: 43200    
-
+  
   lancidr:
     type: http
     behavior: ipcidr
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
     path: ./ruleset/lancidr.yaml
-    interval: 43200
+    interval: 86400
 
   private:
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
     path: ./ruleset/private.yaml
-    interval: 43200
+    interval: 86400
+
+  reject:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+    path: ./ruleset/reject.yaml
+    interval: 86400
+    
+  reject_anti-AD:
+    type: http
+    behavior: domain
+    url: "https://anti-ad.net/clash.yaml"
+    path: ./ruleset/reject_anti-AD.yaml
+    interval: 86400  
+    
+  Unbreak:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Unbreak.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Unbreak.yaml
+    interval: 86400
 
   direct:
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
     path: ./ruleset/direct.yaml
-    interval: 43200
+    interval: 86400
+
+  China:
+    type: http
+    behavior: classical
+    path: ./RuleSet/China.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/China.yaml
+    interval: 86400
+
+  ChinaIP:
+    type: http
+    behavior: ipcidr
+    path: ./RuleSet/Extra/ChinaIP.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/ChinaIP.yaml
+    interval: 86400    
 
 
 rules:
+ - DOMAIN-SUFFIX,access-sngapm.qcloud.com,REJECT
+ - DOMAIN-SUFFIX,al.p2p.huya.com,DIRECT
+ - DOMAIN-SUFFIX,gleam.io,DIRECT
+ - DOMAIN-SUFFIX,store.steampowered.com,DIRECT
+ - IP-CIDR,172.18.254.245/24, DIRECT
+ 
 # Spotiy
  - DOMAIN-SUFFIX,audio-ak-spotify-com.akamaized.net,DIRECT
  - DOMAIN-SUFFIX,audio-ake.spotify.com.edgesuite.net,DIRECT
  - DOMAIN-SUFFIX,scdn.co,DIRECT
  - DOMAIN,spclient.wg.spotify.com,REJECT
 
-# My Rules
- - DOMAIN-SUFFIX,al.p2p.huya.com,DIRECT
- - DOMAIN-SUFFIX,gleam.io,DIRECT
-
+# RULE-SET
+ - RULE-SET,Unbreak,DIRECT
+ 
+ - RULE-SET,lancidr,DIRECT
+ - RULE-SET,private,DIRECT
  
  - RULE-SET,reject,REJECT
  - RULE-SET,reject_anti-AD,REJECT
- - DOMAIN-SUFFIX,access-sngapm.qcloud.com,REJECT
 
- - RULE-SET,lancidr,DIRECT
- - RULE-SET,private,DIRECT
  - RULE-SET,direct,DIRECT
- - DOMAIN-SUFFIX,store.steampowered.com,DIRECT
- - IP-CIDR,172.18.254.245/24, DIRECT
- - GEOIP,CN,DIRECT
+ - RULE-SET,China,DIRECT
+ - RULE-SET,ChinaIP,DIRECT
 
  - MATCH,PROXY
