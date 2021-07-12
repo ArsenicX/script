@@ -5,6 +5,47 @@ mode: Rule
 log-level: info
 external-controller: :9090
 
+
+mixin: # object
+  hosts:
+    'phicomm.me': 192.168.2.1
+  dns:
+    enable: true
+    ipv6: false
+    # listen: 0.0.0.0:53
+    enhanced-mode: redir-host
+    use-hosts: true
+    fake-ip-filter:
+      - 'dns.msftncsi.com'
+      - 'www.msftncsi.com'
+      - 'www.msftconnecttest.com'
+      - '+.qq.com'
+      - '+.music.163.com'
+      - '+.music.162.com'
+    default-nameserver:
+      - 119.29.29.29
+      - 114.114.114.114
+      - 8.8.8.8
+    nameserver:
+      - 119.29.29.29
+      - 223.5.5.5
+      - 8.8.8.8
+      - 114.114.114.114
+      - 1.1.1.1
+    fallback:
+      - 'https://1.1.1.1/dns-query'
+      - 'https://162.159.36.1/dns-query'
+      - 'https://162.14.13.12/dns-query'
+      - 'tls://dns.rubyfish.cn:853'
+      - 'tls://1.0.0.1:853'
+      - 'tls://dns.google:853'
+    fallback-filter:
+      geoip: true
+      ipcidr:
+        - 0.0.0.0/32
+        - 127.0.0.0/8
+        - 240.0.0.0/4
+
 proxies:
   - {"name":"V4-中转9999|广港-新加坡|x2.5|V2ray","type":"vmess","server":"linode-zy.ddns-only.xyz","port":51196,"uuid":"d1eecbbb-c536-3d5e-afdb-28f7a427c042","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/v2ray","ws-headers":{"Host":"linode-zy.ddns-only.xyz"}}
 
@@ -142,6 +183,7 @@ rules:
  - DOMAIN-SUFFIX,gleam.io,DIRECT
  - DOMAIN-SUFFIX,store.steampowered.com,DIRECT
  - IP-CIDR,172.18.254.245/24, DIRECT
+ - IP-CIDR,185.199.111.133/24, PROXY
  
 # Spotiy
  - DOMAIN-SUFFIX,audio-ak-spotify-com.akamaized.net,DIRECT
