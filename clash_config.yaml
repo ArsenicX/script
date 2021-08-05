@@ -174,7 +174,7 @@ rule-providers:
     behavior: domain
     path: ./RuleSet/AdvertisingTest_Domain.yaml
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingTest/AdvertisingTest_Domain.yaml
-    interval: 86400   
+    interval: 86400
 
 
 rules:
@@ -186,6 +186,8 @@ rules:
  
  - DOMAIN-SUFFIX,al.p2p.huya.com,DIRECT
  - DOMAIN-SUFFIX,gleam.io,DIRECT
+ - DOMAIN-SUFFIX,pinyuncloud.com,DIRECT
+ - DOMAIN-SUFFIX,steamstatic.com,DIRECT
  - DOMAIN-SUFFIX,store.steampowered.com,DIRECT
  - IP-CIDR,172.18.254.245/24, DIRECT
  
