@@ -179,10 +179,6 @@ rule-providers:
 
 rules:
  - DOMAIN-SUFFIX,access-sngapm.qcloud.com,REJECT
- - DOMAIN,mesu.apple.com,REJECT
- - DOMAIN,gdmf.apple.com,REJECT
- - DOMAIN,updates-http.cdn-apple.com,REJECT
- - DOMAIN,xp.apple.com,REJECT
  
  - DOMAIN-SUFFIX,al.p2p.huya.com,DIRECT
  - DOMAIN-SUFFIX,gleam.io,DIRECT
