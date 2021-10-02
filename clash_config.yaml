@@ -179,6 +179,8 @@ rule-providers:
 
 rules:
  - DOMAIN-SUFFIX,access-sngapm.qcloud.com,REJECT
+ - DOMAIN-SUFFIX,douyu.com,REJECT
+ - DOMAIN-SUFFIX,huya.com,REJECT
  
  - DOMAIN-SUFFIX,al.p2p.huya.com,DIRECT
  - DOMAIN-SUFFIX,gleam.io,DIRECT
