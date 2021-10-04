@@ -1,0 +1,49 @@
+# 修复百度搜索图片不正常显示
+host-suffix, t1.baidu.com, direct
+host-suffix, t2.baidu.com, direct
+host-suffix, t3.baidu.com, direct
+host-suffix, t4.baidu.com, direct
+host-suffix, t5.baidu.com, direct
+host-suffix, t6.baidu.com, direct
+host-suffix, t7.baidu.com, direct
+host-suffix, t8.baidu.com, direct
+host-suffix, t9.baidu.com, direct
+
+# 阻止百度 app 跳转
+host-suffix, boxer.baidu.com, REJECT
+host-suffix, miao.baidu.com, REJECT
+host-suffix, ada.baidu.com, REJECT
+host-suffix, ext.baidu.com, REJECT
+host-suffix, entry.baidu.com, REJECT
+host-suffix, ug.baidu.com, REJECT
+host-suffix, eopa.baidu.com, REJECT
+
+# 豆瓣去广告
+host-suffix, analytics.rayjump.com, REJECT
+host-suffix, amonsul.douban.com, REJECT
+host-suffix, push.douban.com, REJECT
+ip-cidr, 81.70.0.0/16, REJECT
+IP-CIDR, 49.232.0.0/16, REJECT
+IP-CIDR, 117.128.0.0/16, REJECT
+IP-CIDR, 119.29.0.0/16, REJECT
+
+# Local Area Network 局域网
+host-suffix, local, direct
+ip-cidr, 192.168.0.0/16, direct
+ip-cidr, 10.0.0.0/8, direct
+ip-cidr, 172.16.0.0/12, direct
+ip-cidr, 127.0.0.0/8, direct
+ip-cidr, 100.64.0.0/10, direct
+ip-cidr, 224.0.0.0/4, direct
+ip6-cidr, fe80::/10, direct
+
+
+# Spotify
+host-suffix, akamaized.net, direct
+host-suffix, audio-ake.spotify.com.edgesuite.net, direct
+host-suffix, scdn.co, direct
+host-keyword, spotify, direct
+
+
+final, Final
+
