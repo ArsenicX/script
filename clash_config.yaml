@@ -98,7 +98,7 @@ proxy-groups:
 
 
 rule-providers:
-  
+
   lancidr:
     type: http
     behavior: ipcidr
@@ -111,6 +111,13 @@ rule-providers:
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
     path: ./RuleSet/private.yaml
+    interval: 86400
+  
+  Unbreak:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Unbreak.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Unbreak.yaml
     interval: 86400
 
   reject:
@@ -126,35 +133,7 @@ rule-providers:
     url: "https://anti-ad.net/clash.yaml"
     path: ./RuleSet/reject_anti-AD.yaml
     interval: 86400
-    
-  Unbreak:
-    type: http
-    behavior: classical
-    path: ./RuleSet/Unbreak.yaml
-    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Unbreak.yaml
-    interval: 86400
-
-  direct:
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
-    path: ./RuleSet/direct.yaml
-    interval: 86400
-
-  China:
-    type: http
-    behavior: classical
-    path: ./RuleSet/China.yaml
-    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/China.yaml
-    interval: 86400
-
-  ChinaIP:
-    type: http
-    behavior: ipcidr
-    path: ./RuleSet/ChinaIP.yaml
-    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/ChinaIP.yaml
-    interval: 86400
-    
+        
   AdvertisingTest:
     type: http
     behavior: classical
@@ -175,19 +154,36 @@ rule-providers:
     path: ./RuleSet/AdvertisingTest_Domain.yaml
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingTest/AdvertisingTest_Domain.yaml
     interval: 86400
+ 
+  direct:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
+    path: ./RuleSet/direct.yaml
+    interval: 86400
+
+  China:
+    type: http
+    behavior: classical
+    path: ./RuleSet/China.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/China.yaml
+    interval: 86400
+
+  ChinaIP:
+    type: http
+    behavior: ipcidr
+    path: ./RuleSet/ChinaIP.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/ChinaIP.yaml
+    interval: 86400
 
 
 rules:
- - DOMAIN-SUFFIX,access-sngapm.qcloud.com,REJECT
- - DOMAIN-SUFFIX,douyu.com,REJECT
- - DOMAIN-SUFFIX,huya.com,REJECT
- 
- - DOMAIN-SUFFIX,al.p2p.huya.com,DIRECT
- - DOMAIN-SUFFIX,gleam.io,DIRECT
- - DOMAIN-SUFFIX,pinyuncloud.com,DIRECT
- 
+# 科大
  - IP-CIDR,172.18.254.245/24, DIRECT
  
+ - DOMAIN-SUFFIX,access-sngapm.qcloud.com,REJECT
+ - DOMAIN-SUFFIX,gleam.io,DIRECT
+ - DOMAIN-SUFFIX,pinyuncloud.com,DIRECT
  - IP-CIDR,185.199.111.133/24, PROXY
  
 # Spotiy
@@ -197,13 +193,12 @@ rules:
  - DOMAIN,spclient.wg.spotify.com,REJECT
 
 # RULE-SET 
- - RULE-SET,Unbreak,DIRECT
- 
  - RULE-SET,lancidr,DIRECT
  - RULE-SET,private,DIRECT
  
 # - RULE-SET,reject,REJECT
 # - RULE-SET,reject_anti-AD,REJECT
+ - RULE-SET,Unbreak,DIRECT
  - RULE-SET,AdvertisingTest,DIRECT
  - RULE-SET,AdvertisingTest_Classical,DIRECT
  - RULE-SET,AdvertisingTest_Domain,DIRECT
