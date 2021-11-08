@@ -134,25 +134,25 @@ rule-providers:
     path: ./RuleSet/reject_anti-AD.yaml
     interval: 86400
         
-  AdvertisingTest:
+  Advertising:
     type: http
     behavior: classical
-    path: ./RuleSet/AdvertisingTest.yaml
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingTest/AdvertisingTest.yaml
+    path: ./RuleSet/Advertising.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising.yaml
     interval: 86400
 
-  AdvertisingTest_Classical:
+  Advertising_Classical:
     type: http
     behavior: classical
-    path: ./RuleSet/AdvertisingTest_Classical.yaml
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingTest/AdvertisingTest_Classical.yaml
+    path: ./RuleSet/Advertising_Classical.yaml
+    url:  https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising_Classical.yaml
     interval: 86400
 
-  AdvertisingTest_Domain:
+  Advertising_Domain:
     type: http
     behavior: domain
-    path: ./RuleSet/AdvertisingTest_Domain.yaml
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingTest/AdvertisingTest_Domain.yaml
+    path: ./RuleSet/Advertising_Domain.yaml
+    url:  https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising_Domain.yaml
     interval: 86400
  
   direct:
@@ -199,9 +199,9 @@ rules:
 # - RULE-SET,reject,REJECT
 # - RULE-SET,reject_anti-AD,REJECT
  - RULE-SET,Unbreak,DIRECT
- - RULE-SET,AdvertisingTest,DIRECT
- - RULE-SET,AdvertisingTest_Classical,DIRECT
- - RULE-SET,AdvertisingTest_Domain,DIRECT
+ - RULE-SET,Advertising,DIRECT
+ - RULE-SET,Advertising_Classical,DIRECT
+ - RULE-SET,Advertising_Domain,DIRECT
 
  - RULE-SET,direct,DIRECT
  - RULE-SET,China,DIRECT
