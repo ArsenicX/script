@@ -54,7 +54,7 @@ proxy-providers:
   j01.best:
     type: http
     path: ./profiles/j01.best.yaml
-    url: https://suo.yt/hdShNIS
+    url: https://j03.space/link/jvypUv7tZqyFBtC5?clash=2
     interval: 43200
     health-check:
         enable: true
@@ -63,7 +63,6 @@ proxy-providers:
 # 订阅链接转换：
 ## 地址：https://bianyuan.xyz/
 ## Exclude：(\d\d\.|I\.|I\+|过期)
-## 原始v2ray链接：https://j03.space/link/jvypUv7tZqyFBtC5?clash=2
 
 
 proxy-groups: 
