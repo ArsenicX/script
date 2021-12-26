@@ -183,6 +183,7 @@ rules:
  - DOMAIN-SUFFIX,access-sngapm.qcloud.com,REJECT
  - DOMAIN-SUFFIX,gleam.io,DIRECT
  - DOMAIN-SUFFIX,pinyuncloud.com,DIRECT
+ - DOMAIN-SUFFIX,store.steampowered.com,PROXY
  - IP-CIDR,185.199.111.133/24, PROXY
  
 
