@@ -1,21 +1,21 @@
 let headerCookie = $request.headers["Cookie"];
 
 if (headerCookie) {
-  if ($prefs.valueForKey("jjCookie") != undefined) {
-    if ($prefs.valueForKey("jjCookie") != headerCookie) {
-      var cookie = $prefs.setValueForKey(headerCookie, "jjCookie");
+  if ($prefs.valueForKey("JCookie") != undefined) {
+    if ($prefs.valueForKey("JCookie") != headerCookie) {
+      var cookie = $prefs.setValueForKey(headerCookie, "JCookie");
       if (!cookie) {
-        $notify("更新几🐔Cookie失败！", "", "");
+        $notify("更新机场Cookie失败！", "", "");
       } else {
-        $notify("更新几🐔Cookie成功！", "", "");
+        $notify("更新机场Cookie成功！", "", "");
       }
     }
   } else {
-    let cookie = $prefs.setValueForKey(headerCookie, "jjCookie");
+    let cookie = $prefs.setValueForKey(headerCookie, "JCookie");
     if (!cookie) {
-      $notify("首次写入几🐔Cookie失败！", "", "");
+      $notify("首次写入机场Cookie失败！", "", "");
     } else {
-      $notify("首次写入几🐔Cookie成功！", "", "");
+      $notify("首次写入机场Cookie成功！", "", "");
     }
   }
 }
