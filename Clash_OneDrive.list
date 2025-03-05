@@ -16,8 +16,8 @@ HOST-SUFFIX, crashlytics.com, OneDrive
 HOST, vortex.data.microsoft.com, OneDrive
 HOST, posarprodcssservice.accesscontrol.windows.net, OneDrive
 HOST, redemptionservices.accesscontrol.windows.net, OneDrive
-HOST, token.cp.microsoft.com/, OneDrive
-HOST, tokensit.cp.microsoft-tst.com/, OneDrive
+HOST, token.cp.microsoft.com, OneDrive
+HOST, tokensit.cp.microsoft-tst.com, OneDrive
 HOST-SUFFIX, office.com, OneDrive
 HOST-SUFFIX, officeapps.live.com, OneDrive
 HOST-SUFFIX, aria.microsoft.com, OneDrive
