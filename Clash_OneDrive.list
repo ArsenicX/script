@@ -29,7 +29,6 @@ HOST, vas.samsungapps.com, OneDrive
 HOST, odc.officeapps.live.com, OneDrive
 HOST, login.windows.net, OneDrive
 HOST, login.microsoftonline.com, OneDrive
-HOST, , OneDrive
 HOST-SUFFIX, files.1drv.com, OneDrive
 HOST-SUFFIX, onedrive.live.com, OneDrive
 HOST-SUFFIX, onedrive.live.com, OneDrive
