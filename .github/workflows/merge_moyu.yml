@@ -1,4 +1,4 @@
-name: Daily merge onedrive hosts
+name: Moyu Merge
 
 on:
   schedule:
@@ -22,7 +22,7 @@ jobs:
       - name: Merge into moyu.list
         run: |
           echo '# Auto-generated on $(date -u)' > moyu.list
-          cat Ove.list Drive.list Ovwevwve.list >> moyu.list
+          cat BiliBili.yaml DouYin.yaml Hupu.yaml >> moyu.list
           # 可选去重：
           sort moyu.list | uniq > tmp && mv tmp moyu.list
 
