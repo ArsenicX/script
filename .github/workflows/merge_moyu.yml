@@ -1,0 +1,38 @@
+name: Daily merge onedrive hosts
+
+on:
+  schedule:
+    - cron: '0 0 * * *'   # 每天 UTC 00:00 触发一次
+  workflow_dispatch:      # 支持手动触发
+
+jobs:
+  merge-lists:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Fetch remote host-lists
+        run: |
+          curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.yaml -o BiliBili.yaml
+          curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/DouYin/DouYin.yaml -o DouYin.yaml
+          curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Hupu/Hupu.yaml -o Hupu.yaml
+
+      - name: Merge into moyu.list
+        run: |
+          echo '# Auto-generated on $(date -u)' > moyu.list
+          cat Ove.list Drive.list Ovwevwve.list >> moyu.list
+          # 可选去重：
+          sort moyu.list | uniq > tmp && mv tmp moyu.list
+
+      - name: Commit & Push
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add moyu.list
+          # 只有内容变化时才 commit
+          git diff --staged --quiet || git commit -m "Daily update moyu.list"
+          git push origin HEAD:main
