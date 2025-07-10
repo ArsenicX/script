@@ -1,4 +1,4 @@
-# Merged on Thu Jul 10 02:08:16 UTC 2025
+# Merged on Thu Jul 10 04:10:33 UTC 2025
 DOMAIN-SUFFIX,tophub.today
 DOMAIN-SUFFIX,jandan.net
 
@@ -191,6 +191,17 @@ payload:
   - DOMAIN-SUFFIX,hupujrs.com
   - DOMAIN-SUFFIX,shihuo.cn
   - DOMAIN-SUFFIX,vwanjia.com
+# NAME: HuYa
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2025-06-06 09:17:34
+# DOMAIN-SUFFIX: 4
+# TOTAL: 4
+payload:
+  - DOMAIN-SUFFIX,huya.com
+  - DOMAIN-SUFFIX,huyagame.cn
+  - DOMAIN-SUFFIX,peiwanlu.com
+  - DOMAIN-SUFFIX,snapplay.com
 # NAME: JingDong
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
