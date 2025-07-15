@@ -32,6 +32,7 @@ jobs:
           echo "# From: https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash" > moyu.list
           echo "DOMAIN,keylol.com" >> moyu.list
           echo "DOMAIN,sspai.com" >> moyu.list
+          echo "DOMAIN,www.163.com" >> moyu.list
           echo "DOMAIN-SUFFIX,jandan.net" >> moyu.list
           echo "DOMAIN-SUFFIX,tophub.today" >> moyu.list
           echo "" >> moyu.list
