@@ -28,8 +28,11 @@ jobs:
       - name: Merge files with custom header
         run: |
           echo "# Merged on $(date -u)" > moyu.list
-          echo "DOMAIN-SUFFIX,tophub.today" >> moyu.list
+          echo "# From: https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash" > moyu.list
+          echo "DOMAIN,keylol.com" >> moyu.list
+          echo "DOMAIN,sspai.com" >> moyu.list
           echo "DOMAIN-SUFFIX,jandan.net" >> moyu.list
+          echo "DOMAIN-SUFFIX,tophub.today" >> moyu.list
           echo "" >> moyu.list
           cat BiliBili.yaml DouBan.yaml DouYin.yaml Hupu.yaml HuYa.yaml JingDong.yaml NGA.yaml SMZDM.yaml TianYaForum.yaml Weibo.yaml >> moyu.list
 
