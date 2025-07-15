@@ -24,6 +24,7 @@ jobs:
           curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SMZDM/SMZDM.yaml -o SMZDM.yaml
           curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TianYaForum/TianYaForum.yaml -o TianYaForum.yaml
           curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Weibo/Weibo.yaml -o Weibo.yaml
+          curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Zhihu/Zhihu.yaml -o Zhihu.yaml
 
       - name: Merge files with custom header
         run: |
@@ -34,7 +35,7 @@ jobs:
           echo "DOMAIN-SUFFIX,jandan.net" >> moyu.list
           echo "DOMAIN-SUFFIX,tophub.today" >> moyu.list
           echo "" >> moyu.list
-          cat BiliBili.yaml DouBan.yaml DouYin.yaml Hupu.yaml HuYa.yaml JingDong.yaml NGA.yaml SMZDM.yaml TianYaForum.yaml Weibo.yaml >> moyu.list
+          cat BiliBili.yaml DouBan.yaml DouYin.yaml Hupu.yaml HuYa.yaml JingDong.yaml NGA.yaml SMZDM.yaml TianYaForum.yaml Weibo.yaml Zhihu.yaml >> moyu.list
 
       - name: Commit and push moyu.list
         env:
