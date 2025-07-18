@@ -33,8 +33,10 @@ jobs:
           echo "DOMAIN,keylol.com" >> moyu.list
           echo "DOMAIN,sspai.com" >> moyu.list
           echo "DOMAIN,www.163.com" >> moyu.list
+          echo "DOMAIN-SUFFIX,chongbuluo.com" >> moyu.list
           echo "DOMAIN-SUFFIX,douyin.com" >> moyu.list
           echo "DOMAIN-SUFFIX,jandan.net" >> moyu.list
+          echo "DOMAIN-SUFFIX,kdslife.com" >> moyu.list
           echo "DOMAIN-SUFFIX,tophub.today" >> moyu.list
           echo "" >> moyu.list
           cat BiliBili.yaml DouBan.yaml DouYin.yaml Hupu.yaml HuYa.yaml JingDong.yaml NGA.yaml SMZDM.yaml TianYaForum.yaml Weibo.yaml Zhihu.yaml >> moyu.list
