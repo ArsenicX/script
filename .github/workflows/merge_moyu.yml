@@ -1,4 +1,5 @@
 name: Daily Merge moyu.list
+# from: https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash
 
 on:
   schedule:
@@ -14,6 +15,7 @@ jobs:
 
       - name: Download remote YAML files
         run: |
+          curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/36kr/36kr.yaml -o 36kr.yaml
           curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.yaml -o BiliBili.yaml
           curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/DouBan/DouBan.yaml -o DouBan.yaml
           curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/DouYin/DouYin.yaml -o DouYin.yaml
@@ -30,16 +32,19 @@ jobs:
         run: |
           echo "# Merged on $(date -u)" > moyu.list
           echo "# From: https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash" > moyu.list
+          
           echo "DOMAIN,keylol.com" >> moyu.list
           echo "DOMAIN,sspai.com" >> moyu.list
           echo "DOMAIN,www.163.com" >> moyu.list
           echo "DOMAIN-SUFFIX,chongbuluo.com" >> moyu.list
           echo "DOMAIN-SUFFIX,douyin.com" >> moyu.list
+          echo "DOMAIN-SUFFIX,huxiu.com" >> moyu.list
           echo "DOMAIN-SUFFIX,jandan.net" >> moyu.list
           echo "DOMAIN-SUFFIX,kdslife.com" >> moyu.list
           echo "DOMAIN-SUFFIX,tophub.today" >> moyu.list
+          
           echo "" >> moyu.list
-          cat BiliBili.yaml DouBan.yaml DouYin.yaml Hupu.yaml HuYa.yaml JingDong.yaml NGA.yaml SMZDM.yaml TianYaForum.yaml Weibo.yaml Zhihu.yaml >> moyu.list
+          cat 36kr.yaml BiliBili.yaml DouBan.yaml DouYin.yaml Hupu.yaml HuYa.yaml JingDong.yaml NGA.yaml SMZDM.yaml TianYaForum.yaml Weibo.yaml Zhihu.yaml >> moyu.list
 
       - name: Commit and push moyu.list
         env:
