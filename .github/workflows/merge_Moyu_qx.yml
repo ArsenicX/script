@@ -33,15 +33,15 @@ jobs:
           echo "# Merged on $(date -u)" > Moyu_qx.list
           echo "# From: https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash" > Moyu_qx.list
           
-          echo "DOMAIN,keylol.com" >> Moyu_qx.list
-          echo "DOMAIN,sspai.com" >> Moyu_qx.list
-          echo "DOMAIN,www.163.com" >> Moyu_qx.list
-          echo "DOMAIN-SUFFIX,chongbuluo.com" >> Moyu_qx.list
-          echo "DOMAIN-SUFFIX,douyin.com" >> Moyu_qx.list
-          echo "DOMAIN-SUFFIX,huxiu.com" >> Moyu_qx.list
-          echo "DOMAIN-SUFFIX,jandan.net" >> Moyu_qx.list
-          echo "DOMAIN-SUFFIX,kdslife.com" >> Moyu_qx.list
-          echo "DOMAIN-SUFFIX,tophub.today" >> Moyu_qx.list
+          echo "HOST,keylol.com" >> Moyu_qx.list
+          echo "HOST,sspai.com" >> Moyu_qx.list
+          echo "HOST,www.163.com" >> Moyu_qx.list
+          echo "HOST-SUFFIX,chongbuluo.com" >> Moyu_qx.list
+          echo "HOST-SUFFIX,douyin.com" >> Moyu_qx.list
+          echo "HOST-SUFFIX,huxiu.com" >> Moyu_qx.list
+          echo "HOST-SUFFIX,jandan.net" >> Moyu_qx.list
+          echo "HOST-SUFFIX,kdslife.com" >> Moyu_qx.list
+          echo "HOST-SUFFIX,tophub.today" >> Moyu_qx.list
           
           echo "" >> Moyu_qx.list
           cat 36kr.list BiliBili.list DouBan.list DouYin.list Hupu.list HuYa.list JingDong.list NGA.list SMZDM.list TianYaForum.list Weibo.list Zhihu.list >> Moyu_qx.list
