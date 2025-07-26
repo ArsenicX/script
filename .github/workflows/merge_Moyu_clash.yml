@@ -1,4 +1,4 @@
-name: Daily Merge moyu.list
+name: Daily Merge Moyu_clash.list
 # from: https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash
 
 on:
@@ -30,29 +30,29 @@ jobs:
 
       - name: Merge files with custom header
         run: |
-          echo "# Merged on $(date -u)" > moyu.list
-          echo "# From: https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash" > moyu.list
+          echo "# Merged on $(date -u)" > Moyu_clash.list
+          echo "# From: https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash" > Moyu_clash.list
           
-          echo "DOMAIN,keylol.com" >> moyu.list
-          echo "DOMAIN,sspai.com" >> moyu.list
-          echo "DOMAIN,www.163.com" >> moyu.list
-          echo "DOMAIN-SUFFIX,chongbuluo.com" >> moyu.list
-          echo "DOMAIN-SUFFIX,douyin.com" >> moyu.list
-          echo "DOMAIN-SUFFIX,huxiu.com" >> moyu.list
-          echo "DOMAIN-SUFFIX,jandan.net" >> moyu.list
-          echo "DOMAIN-SUFFIX,kdslife.com" >> moyu.list
-          echo "DOMAIN-SUFFIX,tophub.today" >> moyu.list
+          echo "DOMAIN,keylol.com" >> Moyu_clash.list
+          echo "DOMAIN,sspai.com" >> Moyu_clash.list
+          echo "DOMAIN,www.163.com" >> Moyu_clash.list
+          echo "DOMAIN-SUFFIX,chongbuluo.com" >> Moyu_clash.list
+          echo "DOMAIN-SUFFIX,douyin.com" >> Moyu_clash.list
+          echo "DOMAIN-SUFFIX,huxiu.com" >> Moyu_clash.list
+          echo "DOMAIN-SUFFIX,jandan.net" >> Moyu_clash.list
+          echo "DOMAIN-SUFFIX,kdslife.com" >> Moyu_clash.list
+          echo "DOMAIN-SUFFIX,tophub.today" >> Moyu_clash.list
           
-          echo "" >> moyu.list
-          cat 36kr.yaml BiliBili.yaml DouBan.yaml DouYin.yaml Hupu.yaml HuYa.yaml JingDong.yaml NGA.yaml SMZDM.yaml TianYaForum.yaml Weibo.yaml Zhihu.yaml >> moyu.list
+          echo "" >> Moyu_clash.list
+          cat 36kr.yaml BiliBili.yaml DouBan.yaml DouYin.yaml Hupu.yaml HuYa.yaml JingDong.yaml NGA.yaml SMZDM.yaml TianYaForum.yaml Weibo.yaml Zhihu.yaml >> Moyu_clash.list
 
-      - name: Commit and push moyu.list
+      - name: Commit and push Moyu_clash.list
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add moyu.list
+          git add Moyu_clash.list
           if ! git diff --cached --quiet; then
             git commit -m "Daily merge YAMLs: $(date -u +'%Y-%m-%d')"
             git push origin HEAD:main
