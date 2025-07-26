@@ -1,13 +1,13 @@
 # From: https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash
-DOMAIN,keylol.com
-DOMAIN,sspai.com
-DOMAIN,www.163.com
-DOMAIN-SUFFIX,chongbuluo.com
-DOMAIN-SUFFIX,douyin.com
-DOMAIN-SUFFIX,huxiu.com
-DOMAIN-SUFFIX,jandan.net
-DOMAIN-SUFFIX,kdslife.com
-DOMAIN-SUFFIX,tophub.today
+HOST,keylol.com
+HOST,sspai.com
+HOST,www.163.com
+HOST-SUFFIX,chongbuluo.com
+HOST-SUFFIX,douyin.com
+HOST-SUFFIX,huxiu.com
+HOST-SUFFIX,jandan.net
+HOST-SUFFIX,kdslife.com
+HOST-SUFFIX,tophub.today
 
 # NAME: 36kr
 # AUTHOR: blackmatrix7
