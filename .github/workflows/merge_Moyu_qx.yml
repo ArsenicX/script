@@ -31,7 +31,7 @@ jobs:
       - name: Merge files with custom header
         run: |
           echo "# Merged on $(date -u)" > Moyu_qx.list
-          echo "# From: https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash" > Moyu_qx.list
+          echo "# From: https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/QuantumultX" > Moyu_qx.list
           
           echo "HOST,keylol.com,DIRECT" >> Moyu_qx.list
           echo "HOST,sspai.com,DIRECT" >> Moyu_qx.list
