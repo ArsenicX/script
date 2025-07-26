@@ -1,0 +1,61 @@
+name: Daily Merge Moyu_qx.list
+# from: https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/QuantumultX
+
+on:
+  schedule:
+    - cron: '0 0 * * *'   # 每天 UTC 00:00 自动执行
+  workflow_dispatch:     # 支持手动触发
+
+jobs:
+  merge-yamls:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Download remote YAML files
+        run: |
+          curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/36kr/36kr.list -o 36kr.list
+          curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/BiliBili/BiliBili.list -o BiliBili.list
+          curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/DouBan/DouBan.list -o DouBan.list
+          curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/DouYin/DouYin.list -o DouYin.list
+          curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Hupu/Hupu.list -o Hupu.list
+          curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/HuYa/HuYa.list -o HuYa.list
+          curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/JingDong/JingDong.list -o JingDong.list
+          curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/NGA/NGA.list -o NGA.list
+          curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/SMZDM/SMZDM.list -o SMZDM.list
+          curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/TianYaForum/TianYaForum.list -o TianYaForum.list
+          curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Weibo/Weibo.list -o Weibo.list
+          curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Zhihu/Zhihu.list -o Zhihu.list
+
+      - name: Merge files with custom header
+        run: |
+          echo "# Merged on $(date -u)" > Moyu_qx.list
+          echo "# From: https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash" > Moyu_qx.list
+          
+          echo "DOMAIN,keylol.com" >> Moyu_qx.list
+          echo "DOMAIN,sspai.com" >> Moyu_qx.list
+          echo "DOMAIN,www.163.com" >> Moyu_qx.list
+          echo "DOMAIN-SUFFIX,chongbuluo.com" >> Moyu_qx.list
+          echo "DOMAIN-SUFFIX,douyin.com" >> Moyu_qx.list
+          echo "DOMAIN-SUFFIX,huxiu.com" >> Moyu_qx.list
+          echo "DOMAIN-SUFFIX,jandan.net" >> Moyu_qx.list
+          echo "DOMAIN-SUFFIX,kdslife.com" >> Moyu_qx.list
+          echo "DOMAIN-SUFFIX,tophub.today" >> Moyu_qx.list
+          
+          echo "" >> Moyu_qx.list
+          cat 36kr.list BiliBili.list DouBan.list DouYin.list Hupu.list HuYa.list JingDong.list NGA.list SMZDM.list TianYaForum.list Weibo.list Zhihu.list >> Moyu_qx.list
+
+      - name: Commit and push Moyu_qx.list
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add Moyu_qx.list
+          if ! git diff --cached --quiet; then
+            git commit -m "Daily merge YAMLs: $(date -u +'%Y-%m-%d')"
+            git push origin HEAD:main
+          else
+            echo "No changes, skipping commit."
+          fi
