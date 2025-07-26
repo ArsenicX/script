@@ -1,0 +1,538 @@
+# From: https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash
+DOMAIN,keylol.com
+DOMAIN,sspai.com
+DOMAIN,www.163.com
+DOMAIN-SUFFIX,chongbuluo.com
+DOMAIN-SUFFIX,douyin.com
+DOMAIN-SUFFIX,huxiu.com
+DOMAIN-SUFFIX,jandan.net
+DOMAIN-SUFFIX,kdslife.com
+DOMAIN-SUFFIX,tophub.today
+
+# NAME: 36kr
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2025-06-06 09:17:30
+# HOST-SUFFIX: 4
+# TOTAL: 4
+HOST-SUFFIX,36dianping.com,36kr
+HOST-SUFFIX,36kr.com,36kr
+HOST-SUFFIX,36krcdn.com,36kr
+HOST-SUFFIX,36krcnd.com,36kr
+# NAME: BiliBili
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2025-06-06 09:17:01
+# HOST: 53
+# HOST-SUFFIX: 62
+# IP-CIDR: 8
+# USER-AGENT: 4
+# TOTAL: 127
+HOST,0gr4uqmtt8y41hcjsgrzdrc31.ourdvsss.com,BiliBili
+HOST,0gr4uqmtt8y41hcjsgrzdrc3s.ourdvsss.com,BiliBili
+HOST,0gr4uqmtt8y41hcjsgrzdrc3z.ourdvsss.com,BiliBili
+HOST,0gr4uqmtt8y41hcjsgrzdrctt.ourdvsss.com,BiliBili
+HOST,0gr4uqmtt8y41hcjsgrzdrctu.ourdvsss.com,BiliBili
+HOST,0gr4uqmtt8y41hcjz8yzdnc31.ourdvsss.com,BiliBili
+HOST,0gr4uqmtt8y41hcjz8yzdnc3t.ourdvsss.com,BiliBili
+HOST,0gr4uqmtt8y41hcjzgazdrpba.ourdvsss.com,BiliBili
+HOST,0gr4uqmtt8y41hcjzgazdrpbz.ourdvsss.com,BiliBili
+HOST,0gr4uqmtt8y41hcjzgazdrpjt.ourdvsss.com,BiliBili
+HOST,0gr5dgmttgha1hcj38yzdncb3.ourdvsss.com,BiliBili
+HOST,112-81-125-43.dhost.00cdn.com,BiliBili
+HOST,113-219-145-1.ksyungslb.com,BiliBili
+HOST,114-236-92-129.ksyungslb.com,BiliBili
+HOST,180-101-74-1.ksyungslb.com,BiliBili
+HOST,1geadrmttge3nhcjwgazdope.ourdvsss.com,BiliBili
+HOST,1geadrmttge3nhcjwgwzdqqe.ourdvsss.com,BiliBili
+HOST,1gr3uomttgr31hcjo8yzdnco.ourdvsss.com,BiliBili
+HOST,1gr3uomttgr31hcjo8yzdnpy.ourdvsss.com,BiliBili
+HOST,1gr3uomttgr31hcjtgezdkcy.ourdvsss.com,BiliBili
+HOST,1gr4uqmtt8y41hcjigazdqca.ourdvsss.com,BiliBili
+HOST,1gr4uqmtt8y41hcjigazdqce.ourdvsss.com,BiliBili
+HOST,1gr4uqmtt8y41hcjigazdqco.ourdvsss.com,BiliBili
+HOST,1gr4uqmtt8y41hcjigazdqpo.ourdvsss.com,BiliBili
+HOST,1gr4uqmtt8y41hcjzgwzdkqe.ourdvsss.com,BiliBili
+HOST,1gr5dgmttgha1hcj38yzdcca.ourdvsss.com,BiliBili
+HOST,1gr5dgmttgha1hcj38yzdcco.ourdvsss.com,BiliBili
+HOST,1gr5dgmttgha1hcj38yzdkca.ourdvsss.com,BiliBili
+HOST,1gr5dgmttgha1hcj38yzdkco.ourdvsss.com,BiliBili
+HOST,1gr5dgmttgha1hcj38yzdkpe.ourdvsss.com,BiliBili
+HOST,1gr5dgmttgha1hcj38yzdkpy.ourdvsss.com,BiliBili
+HOST,1gr5dgmttgha1hcj38yzdkqy.ourdvsss.com,BiliBili
+HOST,1gr5dgmttgha1hcj3gczdcpa.ourdvsss.com,BiliBili
+HOST,1gr5dgmttgha1hcj3gczdcpe.ourdvsss.com,BiliBili
+HOST,1gr5dgmttgha1hcj3gczdcpo.ourdvsss.com,BiliBili
+HOST,1gr5dgmttgha1hcj3gczdcqy.ourdvsss.com,BiliBili
+HOST,1gr5dgmttgha1hcttgrzdnpo.ourdvsss.com,BiliBili
+HOST,1graukmttga4nhcjtgozdgce.ourdvsss.com,BiliBili
+HOST,218-91-225-1.ksyungslb.com,BiliBili
+HOST,219-155-150-1.ksyungslb.com,BiliBili
+HOST,222-188-6-1.ksyungslb.com,BiliBili
+HOST,36-104-134-1.ksyungslb.com,BiliBili
+HOST,36-25-252-1.ksyungslb.com,BiliBili
+HOST,3ge3drmttga5nhcbqge3ur.ourdvsss.com,BiliBili
+HOST,3geauymtsgrzdnqbofa5do.ourdvsss.com,BiliBili
+HOST,3geauymtsgrzdnqbofa5dy.ourdvsss.com,BiliBili
+HOST,3geauymtsgrzdrcbzfahue.ourdvsss.com,BiliBili
+HOST,3geauymtsgrzdrcbzfahuk.ourdvsss.com,BiliBili
+HOST,4go41hcjtgazdoctqge4o.ourdvsss.com,BiliBili
+HOST,p-bstarstatic.akamaized.net,BiliBili
+HOST,p.bstarstatic.com,BiliBili
+HOST,upos-bstar-mirrorakam.akamaized.net,BiliBili
+HOST,upos-bstar1-mirrorakam.akamaized.net,BiliBili
+HOST-SUFFIX,acg.tv,BiliBili
+HOST-SUFFIX,acgvideo.com,BiliBili
+HOST-SUFFIX,animetamashi.cn,BiliBili
+HOST-SUFFIX,animetamashi.com,BiliBili
+HOST-SUFFIX,anitama.cn,BiliBili
+HOST-SUFFIX,anitama.net,BiliBili
+HOST-SUFFIX,b23.tv,BiliBili
+HOST-SUFFIX,baka.im,BiliBili
+HOST-SUFFIX,bigfun.cn,BiliBili
+HOST-SUFFIX,bigfunapp.cn,BiliBili
+HOST-SUFFIX,bili22.cn,BiliBili
+HOST-SUFFIX,bili2233.cn,BiliBili
+HOST-SUFFIX,bili23.cn,BiliBili
+HOST-SUFFIX,bili33.cn,BiliBili
+HOST-SUFFIX,biliapi.com,BiliBili
+HOST-SUFFIX,biliapi.net,BiliBili
+HOST-SUFFIX,bilibili.cc,BiliBili
+HOST-SUFFIX,bilibili.cn,BiliBili
+HOST-SUFFIX,bilibili.co,BiliBili
+HOST-SUFFIX,bilibili.com,BiliBili
+HOST-SUFFIX,bilibili.net,BiliBili
+HOST-SUFFIX,bilibili.tv,BiliBili
+HOST-SUFFIX,bilibiligame.cn,BiliBili
+HOST-SUFFIX,bilibiligame.co,BiliBili
+HOST-SUFFIX,bilibiligame.net,BiliBili
+HOST-SUFFIX,bilibilipay.cn,BiliBili
+HOST-SUFFIX,bilibilipay.com,BiliBili
+HOST-SUFFIX,bilicdn1.com,BiliBili
+HOST-SUFFIX,bilicdn2.com,BiliBili
+HOST-SUFFIX,bilicdn3.com,BiliBili
+HOST-SUFFIX,bilicdn4.com,BiliBili
+HOST-SUFFIX,bilicdn5.com,BiliBili
+HOST-SUFFIX,bilicomics.com,BiliBili
+HOST-SUFFIX,biligame.cn,BiliBili
+HOST-SUFFIX,biligame.co,BiliBili
+HOST-SUFFIX,biligame.com,BiliBili
+HOST-SUFFIX,biligame.net,BiliBili
+HOST-SUFFIX,biligo.com,BiliBili
+HOST-SUFFIX,biliimg.com,BiliBili
+HOST-SUFFIX,biliintl.co,BiliBili
+HOST-SUFFIX,biliintl.com,BiliBili
+HOST-SUFFIX,biliplus.com,BiliBili
+HOST-SUFFIX,bilivideo.cn,BiliBili
+HOST-SUFFIX,bilivideo.com,BiliBili
+HOST-SUFFIX,bilivideo.net,BiliBili
+HOST-SUFFIX,corari.com,BiliBili
+HOST-SUFFIX,dreamcast.hk,BiliBili
+HOST-SUFFIX,dyhgames.com,BiliBili
+HOST-SUFFIX,hdslb.com,BiliBili
+HOST-SUFFIX,hdslb.com.w.kunlunhuf.com,BiliBili
+HOST-SUFFIX,hdslb.com.w.kunlunpi.com,BiliBili
+HOST-SUFFIX,hdslb.net,BiliBili
+HOST-SUFFIX,hdslb.org,BiliBili
+HOST-SUFFIX,im9.com,BiliBili
+HOST-SUFFIX,maoercdn.com,BiliBili
+HOST-SUFFIX,mcbbs.net,BiliBili
+HOST-SUFFIX,mincdn.com,BiliBili
+HOST-SUFFIX,sharejoytech.com,BiliBili
+HOST-SUFFIX,smtcdns.net,BiliBili
+HOST-SUFFIX,upos-hz-mirrorakam.akamaized.net,BiliBili
+HOST-SUFFIX,uposdash-302-bilivideo.yfcdn.net,BiliBili
+HOST-SUFFIX,yo9.com,BiliBili
+USER-AGENT,*bili*,BiliBili
+USER-AGENT,Bilibili*,BiliBili
+USER-AGENT,bili*,BiliBili
+USER-AGENT,bili-inter*,BiliBili
+IP-CIDR,106.75.74.76/32,BiliBili
+IP-CIDR,111.206.25.147/32,BiliBili
+IP-CIDR,119.3.238.64/32,BiliBili
+IP-CIDR,120.92.108.182/32,BiliBili
+IP-CIDR,120.92.113.99/32,BiliBili
+IP-CIDR,120.92.153.217/32,BiliBili
+IP-CIDR,134.175.207.130/32,BiliBili
+IP-CIDR,203.107.1.0/24,BiliBili
+# NAME: DouBan
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2025-06-06 09:17:33
+# HOST-SUFFIX: 3
+# TOTAL: 3
+HOST-SUFFIX,douban.com,DouBan
+HOST-SUFFIX,douban.fm,DouBan
+HOST-SUFFIX,doubanio.com,DouBan
+# NAME: DouYin
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2025-06-06 09:18:50
+# HOST: 2
+# HOST-SUFFIX: 11
+# TOTAL: 13
+HOST,lf3-static.bytednsdoc.com,DouYin
+HOST,v5-dy-o-abtest.zjcdn.com,DouYin
+HOST-SUFFIX,amemv.com,DouYin
+HOST-SUFFIX,douyincdn.com,DouYin
+HOST-SUFFIX,douyinpic.com,DouYin
+HOST-SUFFIX,douyinstatic.com,DouYin
+HOST-SUFFIX,douyinvod.com,DouYin
+HOST-SUFFIX,idouyinvod.com,DouYin
+HOST-SUFFIX,ixigua.com,DouYin
+HOST-SUFFIX,ixiguavideo.com,DouYin
+HOST-SUFFIX,pstatp.com,DouYin
+HOST-SUFFIX,snssdk.com,DouYin
+HOST-SUFFIX,toutiao.com,DouYin
+# NAME: Hupu
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2025-06-06 09:17:35
+# HOST-SUFFIX: 12
+# TOTAL: 12
+HOST-SUFFIX,afpchinesesports.com,Hupu
+HOST-SUFFIX,goalhi.cn,Hupu
+HOST-SUFFIX,hellof1.com,Hupu
+HOST-SUFFIX,hoopchina.com,Hupu
+HOST-SUFFIX,hoopchina.com.cn,Hupu
+HOST-SUFFIX,hupu.com,Hupu
+HOST-SUFFIX,hupu.gg,Hupu
+HOST-SUFFIX,hupu.io,Hupu
+HOST-SUFFIX,hupucdn.com,Hupu
+HOST-SUFFIX,hupujrs.com,Hupu
+HOST-SUFFIX,shihuo.cn,Hupu
+HOST-SUFFIX,vwanjia.com,Hupu
+# NAME: HuYa
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2025-06-06 09:17:34
+# HOST-SUFFIX: 4
+# TOTAL: 4
+HOST-SUFFIX,huya.com,HuYa
+HOST-SUFFIX,huyagame.cn,HuYa
+HOST-SUFFIX,peiwanlu.com,HuYa
+HOST-SUFFIX,snapplay.com,HuYa
+# NAME: JingDong
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2025-06-06 09:17:35
+# HOST-SUFFIX: 248
+# TOTAL: 248
+HOST-SUFFIX,1huizhan.com,JingDong
+HOST-SUFFIX,3.cn,JingDong
+HOST-SUFFIX,300hu.com,JingDong
+HOST-SUFFIX,360buy.cn,JingDong
+HOST-SUFFIX,360buy.com,JingDong
+HOST-SUFFIX,360buy.com.cn,JingDong
+HOST-SUFFIX,360buyimg.com,JingDong
+HOST-SUFFIX,360buyinternational.com,JingDong
+HOST-SUFFIX,360top.com,JingDong
+HOST-SUFFIX,7fresh.com,JingDong
+HOST-SUFFIX,baitiao.cn,JingDong
+HOST-SUFFIX,baitiao.com,JingDong
+HOST-SUFFIX,blackdragon.com,JingDong
+HOST-SUFFIX,buyjingxi.com,JingDong
+HOST-SUFFIX,caiyu.com,JingDong
+HOST-SUFFIX,chicalot.cn,JingDong
+HOST-SUFFIX,chinabank.com.cn,JingDong
+HOST-SUFFIX,cloud-beijing.com,JingDong
+HOST-SUFFIX,cloud-hebi.com,JingDong
+HOST-SUFFIX,cloud-ningbo.com,JingDong
+HOST-SUFFIX,cloud-ordos.com,JingDong
+HOST-SUFFIX,cloud-shenzhen.com,JingDong
+HOST-SUFFIX,cloud-shiyan.com,JingDong
+HOST-SUFFIX,cloud-wuhan.com,JingDong
+HOST-SUFFIX,cloud-xian.com,JingDong
+HOST-SUFFIX,cloud-xm.com,JingDong
+HOST-SUFFIX,cloud-zhaoqing.com,JingDong
+HOST-SUFFIX,cloud-zhongwei.com,JingDong
+HOST-SUFFIX,cloudanqing.com,JingDong
+HOST-SUFFIX,cloudbaoshan.com,JingDong
+HOST-SUFFIX,cloudbeibei.com,JingDong
+HOST-SUFFIX,cloudbinzhou.com,JingDong
+HOST-SUFFIX,cloudchangde.com,JingDong
+HOST-SUFFIX,cloudchangsha.com,JingDong
+HOST-SUFFIX,cloudchangzhou.com,JingDong
+HOST-SUFFIX,cloudchaozhou.com,JingDong
+HOST-SUFFIX,cloudchengde.com,JingDong
+HOST-SUFFIX,cloudchengdu.com,JingDong
+HOST-SUFFIX,cloudchuzhou.com,JingDong
+HOST-SUFFIX,cloudczs.com,JingDong
+HOST-SUFFIX,clouddalian.com,JingDong
+HOST-SUFFIX,clouddatong.com,JingDong
+HOST-SUFFIX,clouddongying.com,JingDong
+HOST-SUFFIX,cloudfoshan.com,JingDong
+HOST-SUFFIX,cloudfuqing.com,JingDong
+HOST-SUFFIX,cloudganzhou.com,JingDong
+HOST-SUFFIX,cloudguangzhou.com,JingDong
+HOST-SUFFIX,cloudhaidong.com,JingDong
+HOST-SUFFIX,cloudhefei.com,JingDong
+HOST-SUFFIX,cloudhengshui.com,JingDong
+HOST-SUFFIX,cloudhuaihua.com,JingDong
+HOST-SUFFIX,cloudhuizhou.com,JingDong
+HOST-SUFFIX,cloudjinan.com,JingDong
+HOST-SUFFIX,cloudjinchang.com,JingDong
+HOST-SUFFIX,cloudjingzhou.com,JingDong
+HOST-SUFFIX,cloudjining.com,JingDong
+HOST-SUFFIX,cloudjiujiang.com,JingDong
+HOST-SUFFIX,cloudkunming.com,JingDong
+HOST-SUFFIX,cloudleshan.com,JingDong
+HOST-SUFFIX,cloudlijiang.com,JingDong
+HOST-SUFFIX,cloudlishui.com,JingDong
+HOST-SUFFIX,cloudluohe.com,JingDong
+HOST-SUFFIX,cloudluoyang.com,JingDong
+HOST-SUFFIX,cloudmeishan.com,JingDong
+HOST-SUFFIX,cloudnanan.com,JingDong
+HOST-SUFFIX,cloudnanjing.com,JingDong
+HOST-SUFFIX,cloudnanning.com,JingDong
+HOST-SUFFIX,cloudnantong.com,JingDong
+HOST-SUFFIX,cloudquanzhou.com,JingDong
+HOST-SUFFIX,cloudsanya.com,JingDong
+HOST-SUFFIX,cloudshanghai.com,JingDong
+HOST-SUFFIX,cloudshaoyang.com,JingDong
+HOST-SUFFIX,cloudshenfuxingqu.com,JingDong
+HOST-SUFFIX,cloudsiping.com,JingDong
+HOST-SUFFIX,cloudsuqian.com,JingDong
+HOST-SUFFIX,cloudtangshan.com,JingDong
+HOST-SUFFIX,cloudtianjin.com,JingDong
+HOST-SUFFIX,cloudtongchuan.com,JingDong
+HOST-SUFFIX,cloudtongliang.com,JingDong
+HOST-SUFFIX,cloudweinan.com,JingDong
+HOST-SUFFIX,cloudxiangtan.com,JingDong
+HOST-SUFFIX,cloudxianyou.com,JingDong
+HOST-SUFFIX,cloudxining.com,JingDong
+HOST-SUFFIX,cloudyanan.com,JingDong
+HOST-SUFFIX,cloudyancheng.com,JingDong
+HOST-SUFFIX,cloudyantai.com,JingDong
+HOST-SUFFIX,cloudyinchuan.com,JingDong
+HOST-SUFFIX,cloudyueyang.com,JingDong
+HOST-SUFFIX,cloudyuncheng.com,JingDong
+HOST-SUFFIX,cloudyuxi.com,JingDong
+HOST-SUFFIX,cloudzhongshan.com,JingDong
+HOST-SUFFIX,cloudzhuhai.com,JingDong
+HOST-SUFFIX,dao123.com,JingDong
+HOST-SUFFIX,duiou.com.cn,JingDong
+HOST-SUFFIX,goselling.com,JingDong
+HOST-SUFFIX,ibaitiao.com,JingDong
+HOST-SUFFIX,info-insur.com,JingDong
+HOST-SUFFIX,isvjcloud.com,JingDong
+HOST-SUFFIX,isvjd.com,JingDong
+HOST-SUFFIX,jcloud-cache.com,JingDong
+HOST-SUFFIX,jcloud-cache.net,JingDong
+HOST-SUFFIX,jcloud-cdn.com,JingDong
+HOST-SUFFIX,jcloud-live.com,JingDong
+HOST-SUFFIX,jcloud-oss.com,JingDong
+HOST-SUFFIX,jcloud.com,JingDong
+HOST-SUFFIX,jcloudcache.com,JingDong
+HOST-SUFFIX,jcloudcache.net,JingDong
+HOST-SUFFIX,jcloudcs.com,JingDong
+HOST-SUFFIX,jclouddn.com,JingDong
+HOST-SUFFIX,jclouddns.com,JingDong
+HOST-SUFFIX,jclouddns.net,JingDong
+HOST-SUFFIX,jcloudec.com,JingDong
+HOST-SUFFIX,jcloudedge.com,JingDong
+HOST-SUFFIX,jcloudedge.net,JingDong
+HOST-SUFFIX,jcloudgslb.com,JingDong
+HOST-SUFFIX,jcloudgslb.net,JingDong
+HOST-SUFFIX,jcloudimg.com,JingDong
+HOST-SUFFIX,jcloudimg.net,JingDong
+HOST-SUFFIX,jcloudlb.com,JingDong
+HOST-SUFFIX,jcloudlb.net,JingDong
+HOST-SUFFIX,jcloudlive.com,JingDong
+HOST-SUFFIX,jcloudlv.com,JingDong
+HOST-SUFFIX,jcloudoss.com,JingDong
+HOST-SUFFIX,jcloudresolve.com,JingDong
+HOST-SUFFIX,jcloudresolve.net,JingDong
+HOST-SUFFIX,jcloudss.com,JingDong
+HOST-SUFFIX,jcloudstatic.com,JingDong
+HOST-SUFFIX,jcloudstatic.net,JingDong
+HOST-SUFFIX,jcloudvideo.com,JingDong
+HOST-SUFFIX,jcloudvideo.net,JingDong
+HOST-SUFFIX,jcloudwaf.com,JingDong
+HOST-SUFFIX,jcloudwaftest.cn,JingDong
+HOST-SUFFIX,jcloudwaftest.com,JingDong
+HOST-SUFFIX,jcloudwaftest.net,JingDong
+HOST-SUFFIX,jclps.com,JingDong
+HOST-SUFFIX,jd-app.com,JingDong
+HOST-SUFFIX,jd-ex.cn,JingDong
+HOST-SUFFIX,jd-ex.com,JingDong
+HOST-SUFFIX,jd-ex.com.cn,JingDong
+HOST-SUFFIX,jd-ex.net,JingDong
+HOST-SUFFIX,jd.cn,JingDong
+HOST-SUFFIX,jd.co.th,JingDong
+HOST-SUFFIX,jd.com,JingDong
+HOST-SUFFIX,jd.com.cn,JingDong
+HOST-SUFFIX,jd.hk,JingDong
+HOST-SUFFIX,jd.id,JingDong
+HOST-SUFFIX,jd.ru,JingDong
+HOST-SUFFIX,jd.shop,JingDong
+HOST-SUFFIX,jdbusiness.com,JingDong
+HOST-SUFFIX,jdcache.com,JingDong
+HOST-SUFFIX,jdcdn.com,JingDong
+HOST-SUFFIX,jdcloud-api.com,JingDong
+HOST-SUFFIX,jdcloud-api.net,JingDong
+HOST-SUFFIX,jdcloud-edu.com,JingDong
+HOST-SUFFIX,jdcloud-elite.com,JingDong
+HOST-SUFFIX,jdcloud-elive.com,JingDong
+HOST-SUFFIX,jdcloud-livebuy.com,JingDong
+HOST-SUFFIX,jdcloud-mail.com,JingDong
+HOST-SUFFIX,jdcloud-openapi.com,JingDong
+HOST-SUFFIX,jdcloud-oss.com,JingDong
+HOST-SUFFIX,jdcloud.com,JingDong
+HOST-SUFFIX,jdcloudcache.com,JingDong
+HOST-SUFFIX,jdcloudcache.net,JingDong
+HOST-SUFFIX,jdcloudcdn.com,JingDong
+HOST-SUFFIX,jdcloudcdn.net,JingDong
+HOST-SUFFIX,jdcloudcs.com,JingDong
+HOST-SUFFIX,jdclouddns.com,JingDong
+HOST-SUFFIX,jdclouddns.net,JingDong
+HOST-SUFFIX,jdcloudedge.com,JingDong
+HOST-SUFFIX,jdcloudedge.net,JingDong
+HOST-SUFFIX,jdcloudlb.com,JingDong
+HOST-SUFFIX,jdcloudlb.net,JingDong
+HOST-SUFFIX,jdcloudlive.com,JingDong
+HOST-SUFFIX,jdcloudlive.net,JingDong
+HOST-SUFFIX,jdcloudresolve.com,JingDong
+HOST-SUFFIX,jdcloudresolve.net,JingDong
+HOST-SUFFIX,jdcloudsite.com,JingDong
+HOST-SUFFIX,jdcloudstatic.com,JingDong
+HOST-SUFFIX,jdcloudstatic.net,JingDong
+HOST-SUFFIX,jdcloudstatus.com,JingDong
+HOST-SUFFIX,jdcloudstatus.net,JingDong
+HOST-SUFFIX,jdcloudvideo.com,JingDong
+HOST-SUFFIX,jdcloudvideo.net,JingDong
+HOST-SUFFIX,jdcloudwaf.com,JingDong
+HOST-SUFFIX,jdcontent.com,JingDong
+HOST-SUFFIX,jdd-global.com,JingDong
+HOST-SUFFIX,jddapeigou.com,JingDong
+HOST-SUFFIX,jddebug.com,JingDong
+HOST-SUFFIX,jddglobal.com,JingDong
+HOST-SUFFIX,jddtv.cn,JingDong
+HOST-SUFFIX,jddtv.com,JingDong
+HOST-SUFFIX,jdemall.com,JingDong
+HOST-SUFFIX,jdfeijing.com,JingDong
+HOST-SUFFIX,jdfinance.com,JingDong
+HOST-SUFFIX,jdfmgt.com,JingDong
+HOST-SUFFIX,jdfw1.com,JingDong
+HOST-SUFFIX,jdgslb.com,JingDong
+HOST-SUFFIX,jdgslb.net,JingDong
+HOST-SUFFIX,jdjinrong.com,JingDong
+HOST-SUFFIX,jdl.cn,JingDong
+HOST-SUFFIX,jdl.com,JingDong
+HOST-SUFFIX,jdl.com.cn,JingDong
+HOST-SUFFIX,jdlike.cn,JingDong
+HOST-SUFFIX,jdpay.com,JingDong
+HOST-SUFFIX,jdpaydns.com,JingDong
+HOST-SUFFIX,jdsmartkf.com,JingDong
+HOST-SUFFIX,jdwl.com,JingDong
+HOST-SUFFIX,jdworldwide.com,JingDong
+HOST-SUFFIX,jdx.com,JingDong
+HOST-SUFFIX,jhscm.com,JingDong
+HOST-SUFFIX,jingdong.com,JingDong
+HOST-SUFFIX,jingdongjinrong.com,JingDong
+HOST-SUFFIX,jingpinhui.com,JingDong
+HOST-SUFFIX,jingxi.com,JingDong
+HOST-SUFFIX,jkcsjd.com,JingDong
+HOST-SUFFIX,joybuy.com,JingDong
+HOST-SUFFIX,joybuy.es,JingDong
+HOST-SUFFIX,linglonglife.com,JingDong
+HOST-SUFFIX,logiseasy.com,JingDong
+HOST-SUFFIX,mayshijia.com,JingDong
+HOST-SUFFIX,minitiao.com,JingDong
+HOST-SUFFIX,missjia.net,JingDong
+HOST-SUFFIX,ocwms.com,JingDong
+HOST-SUFFIX,paidaojia.cn,JingDong
+HOST-SUFFIX,paipai.com,JingDong
+HOST-SUFFIX,prestodb-china.com,JingDong
+HOST-SUFFIX,prestodb.net.cn,JingDong
+HOST-SUFFIX,qianxun.com,JingDong
+HOST-SUFFIX,qingzhouip.com,JingDong
+HOST-SUFFIX,sgsic.com,JingDong
+HOST-SUFFIX,shlsyb.com,JingDong
+HOST-SUFFIX,toplife.com,JingDong
+HOST-SUFFIX,vg.com,JingDong
+HOST-SUFFIX,wanggou.com,JingDong
+HOST-SUFFIX,wangyin.com,JingDong
+HOST-SUFFIX,wdfok.com,JingDong
+HOST-SUFFIX,wuliujie.cn,JingDong
+HOST-SUFFIX,wuliujie.com,JingDong
+HOST-SUFFIX,xianjiqun.com,JingDong
+HOST-SUFFIX,xjoycity.com,JingDong
+HOST-SUFFIX,yhcdn.cn,JingDong
+HOST-SUFFIX,yhd.com,JingDong
+HOST-SUFFIX,yihaodian.com,JingDong
+HOST-SUFFIX,yihaodianimg.com,JingDong
+HOST-SUFFIX,yihaomall.com,JingDong
+HOST-SUFFIX,yixun.com,JingDong
+HOST-SUFFIX,yiyaojd.com,JingDong
+HOST-SUFFIX,yizhitou.com,JingDong
+# NAME: NGA
+# AUTHOR: ameyukisora
+# REPO: https://github.com/ameyukisora/Clash-Rule
+# UPDATED: 2024-01-08 16:02:03
+# HOST-SUFFIX: 4
+# TOTAL: 4
+HOST-SUFFIX,178.com,NGA
+HOST-SUFFIX,nga.cn,NGA
+HOST-SUFFIX,ngabbs.com,NGA
+HOST-SUFFIX,ngacn.cc,NGA
+# NAME: SMZDM
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2025-06-06 09:17:37
+# HOST-SUFFIX: 9
+# TOTAL: 9
+HOST-SUFFIX,faxianpindao.com,SMZDM
+HOST-SUFFIX,quaolai.com,SMZDM
+HOST-SUFFIX,smzdm.com,SMZDM
+HOST-SUFFIX,smzdmimg.com,SMZDM
+HOST-SUFFIX,valueq-sea.com,SMZDM
+HOST-SUFFIX,wanwuzhinan.com,SMZDM
+HOST-SUFFIX,zdm.net,SMZDM
+HOST-SUFFIX,zdmimg.com,SMZDM
+HOST-SUFFIX,zhidemai.com,SMZDM
+# NAME: TianYaForum
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2025-06-06 09:17:38
+# HOST-SUFFIX: 13
+# TOTAL: 13
+HOST-SUFFIX,gz12301.com,TianYaForum
+HOST-SUFFIX,hainan.com,TianYaForum
+HOST-SUFFIX,hainan.net,TianYaForum
+HOST-SUFFIX,hi114.cn,TianYaForum
+HOST-SUFFIX,hibusiness.com,TianYaForum
+HOST-SUFFIX,hifortune.net,TianYaForum
+HOST-SUFFIX,laibafile.cn,TianYaForum
+HOST-SUFFIX,tianya.cn,TianYaForum
+HOST-SUFFIX,tianya.com.cn,TianYaForum
+HOST-SUFFIX,tianyablog.com,TianYaForum
+HOST-SUFFIX,tianyaclub.com,TianYaForum
+HOST-SUFFIX,tianyaui.com,TianYaForum
+HOST-SUFFIX,tysurl.com,TianYaForum
+# NAME: Weibo
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2025-06-06 09:17:02
+# HOST-KEYWORD: 1
+# HOST-SUFFIX: 3
+# TOTAL: 4
+HOST-SUFFIX,weibo.cn,Weibo
+HOST-SUFFIX,weibo.com,Weibo
+HOST-SUFFIX,weibocdn.com,Weibo
+HOST-KEYWORD,weibo,Weibo
+# NAME: Zhihu
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2025-06-06 09:18:49
+# HOST-SUFFIX: 2
+# IP-CIDR: 4
+# IP6-CIDR: 1
+# TOTAL: 7
+HOST-SUFFIX,zhihu.com,Zhihu
+HOST-SUFFIX,zhimg.com,Zhihu
+IP-CIDR,103.41.167.226/32,Zhihu
+IP-CIDR,103.41.167.234/31,Zhihu
+IP-CIDR,103.41.167.236/32,Zhihu
+IP-CIDR,118.89.204.198/32,Zhihu
+IP6-CIDR,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,Zhihu
