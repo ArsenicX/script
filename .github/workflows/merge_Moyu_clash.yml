@@ -62,7 +62,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          WORKFLOW_FILE=".github/workflows/daily-merge.yml"
+          WORKFLOW_FILE=".github/workflows/merge_Moyu_clash.yml"
           # ISO 8601 UTC 时间戳
           TIMESTAMP="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
           # 将要写入的注释行
