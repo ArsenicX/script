@@ -15,6 +15,7 @@ jobs:
 
       - name: Download remote YAML files
         run: |
+          # 下载若干远程 yaml 到工作目录
           curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/36kr/36kr.yaml -o 36kr.yaml
           curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.yaml -o BiliBili.yaml
           curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/DouBan/DouBan.yaml -o DouBan.yaml
@@ -30,9 +31,11 @@ jobs:
 
       - name: Merge files with custom header
         run: |
-          echo "# Merged on $(date -u)" > Moyu_clash.list
-          echo "# From: https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash" > Moyu_clash.list
-          
+          # 生成/覆盖 Moyu_clash.list（使用 UTC 时间做 merged header）
+          echo "# Merged on $(date -u +'%Y-%m-%dT%H:%M:%SZ')" > Moyu_clash.list
+          echo "# From: https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash" >> Moyu_clash.list
+
+          # 静态条目（示例）
           echo "DOMAIN,keylol.com" >> Moyu_clash.list
           echo "DOMAIN,sspai.com" >> Moyu_clash.list
           echo "DOMAIN,www.163.com" >> Moyu_clash.list
@@ -42,20 +45,70 @@ jobs:
           echo "DOMAIN-SUFFIX,jandan.net" >> Moyu_clash.list
           echo "DOMAIN-SUFFIX,kdslife.com" >> Moyu_clash.list
           echo "DOMAIN-SUFFIX,tophub.today" >> Moyu_clash.list
-          
+
           echo "" >> Moyu_clash.list
+
+          # 合并所有下载的 yaml 到 Moyu_clash.list（按需调整顺序/内容）
           cat 36kr.yaml BiliBili.yaml DouBan.yaml DouYin.yaml Hupu.yaml HuYa.yaml JingDong.yaml NGA.yaml SMZDM.yaml TianYaForum.yaml Weibo.yaml Zhihu.yaml >> Moyu_clash.list
 
-      - name: Commit and push Moyu_clash.list
+      - name: Show a short preview
+        run: |
+          # 可选：显示合并后的前 20 行，便于调试/确认
+          echo "==== preview (first 20 lines) ===="
+          head -n 20 Moyu_clash.list || true
+
+      - name: Update workflow file with last run timestamp
+        # 我们要修改当前 workflow 文件本身，插入/替换一行 "# last_run: <ISO UTC time>"
+        run: |
+          set -euo pipefail
+
+          WORKFLOW_FILE=".github/workflows/daily-merge.yml"
+          # ISO 8601 UTC 时间戳
+          TIMESTAMP="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          # 将要写入的注释行
+          NEW_LINE="# last_run: $TIMESTAMP"
+
+          echo "Updating workflow file: $WORKFLOW_FILE with last run timestamp: $TIMESTAMP"
+
+          # 1) 如果文件中已有 "# last_run:" 行，直接替换；否则在文件 name: 行之后插入。
+          if grep -q '^# last_run:' "$WORKFLOW_FILE"; then
+            # 用 sed 原地替换（兼容 linux sed）
+            sed -i "s/^# last_run:.*/$NEW_LINE/" "$WORKFLOW_FILE"
+            echo "Replaced existing # last_run: line."
+          else
+            # 插入到第一处以 "name:" 开头的行之后（如果没有 name:，则插入到文件顶部）
+            if grep -q '^name:' "$WORKFLOW_FILE"; then
+              awk -v newline="$NEW_LINE" '{
+                print $0
+                if (!inserted && $0 ~ /^name:/) {
+                  print newline
+                  inserted=1
+                }
+              } END { if (!inserted) print newline }' "$WORKFLOW_FILE" > "$WORKFLOW_FILE.tmp" && mv "$WORKFLOW_FILE.tmp" "$WORKFLOW_FILE"
+              echo "Inserted # last_run: after the first 'name:' line."
+            else
+              # 回退方案：文件无 name:，则追加到文件顶部
+              echo "$NEW_LINE" | cat - "$WORKFLOW_FILE" > "$WORKFLOW_FILE.tmp" && mv "$WORKFLOW_FILE.tmp" "$WORKFLOW_FILE"
+              echo "Prepended # last_run: to workflow file (no name: found)."
+            fi
+          fi
+
+      - name: Commit and push Moyu_clash.list and workflow change
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          # 配置 git 用户信息
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add Moyu_clash.list
+
+          # 添加改变（同时提交 Moyu_clash.list 和 workflow 文件的变更）
+          git add Moyu_clash.list .github/workflows/daily-merge.yml
+
+          # 只有在有变更时才 commit & push
           if ! git diff --cached --quiet; then
-            git commit -m "Daily merge YAMLs: $(date -u +'%Y-%m-%d')"
+            git commit -m "Daily merge: update Moyu_clash.list and last_run ${GITHUB_RUN_ID} ${GITHUB_RUN_NUMBER} ${GITHUB_RUN_ATTEMPT} at $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+            # 推送到当前分支（假设 main）
             git push origin HEAD:main
           else
-            echo "No changes, skipping commit."
+            echo "No changes to commit."
           fi
