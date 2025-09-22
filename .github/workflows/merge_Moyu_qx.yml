@@ -2,70 +2,70 @@ name: Daily Merge Moyu_qx.list
 # from: https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/QuantumultX
 
 on:
-schedule:
-- cron: '0 0 * * *'   # 每天 UTC 00:00 自动执行
-workflow_dispatch:     # 支持手动触发
+    schedule:
+      - cron: '0 0 * * *'   # 每天 UTC 00:00 自动执行
+    workflow_dispatch:     # 支持手动触发
 
 jobs:
 merge-yamls:
 runs-on: ubuntu-latest
 steps:
-- name: Checkout repository
-uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v3
 
-- name: Download remote YAML files
-run: |
-# 下载外部 yaml（失败不停止，-sfL）
-curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/36kr/36kr.list -o 36kr.list
-curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/BiliBili/BiliBili.list -o BiliBili.list
-curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/DouBan/DouBan.list -o DouBan.list
-curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/DouYin/DouYin.list -o DouYin.list
-curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Hupu/Hupu.list -o Hupu.list
-curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/HuYa/HuYa.list -o HuYa.list
-curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/JingDong/JingDong.list -o JingDong.list
-curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/NGA/NGA.list -o NGA.list
-curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/SMZDM/SMZDM.list -o SMZDM.list
-curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/TianYaForum/TianYaForum.list -o TianYaForum.list
-curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Weibo/Weibo.list -o Weibo.list
-curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Zhihu/Zhihu.list -o Zhihu.list
+    - name: Download remote YAML files
+      run: |
+      # 下载外部 yaml（失败不停止，-sfL）
+        curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/36kr/36kr.list -o 36kr.list
+        curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/BiliBili/BiliBili.list -o BiliBili.list
+        curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/DouBan/DouBan.list -o DouBan.list
+        curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/DouYin/DouYin.list -o DouYin.list
+        curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Hupu/Hupu.list -o Hupu.list
+        curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/HuYa/HuYa.list -o HuYa.list
+        curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/JingDong/JingDong.list -o JingDong.list
+        curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/NGA/NGA.list -o NGA.list
+        curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/SMZDM/SMZDM.list -o SMZDM.list
+        curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/TianYaForum/TianYaForum.list -o TianYaForum.list
+        curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Weibo/Weibo.list -o Weibo.list
+        curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Zhihu/Zhihu.list -o Zhihu.list
 
-- name: Merge files with custom header (with last-update line)
-run: |
-# 这里我们选择使用 Asia/Shanghai 时区（北京时间）。如果你想用 UTC，请把 TZ=Asia/Shanghai 改为 date -u
-# 1) 生成 header（使用 > 覆盖旧文件）
-echo "# Moyu_qx.list" > Moyu_qx.list
-echo "# From: https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/QuantumultX" >> Moyu_qx.list
-# 写入“最后更新时间”这一行（每次运行会被更新为最新时间）
-echo "# 最后更新时间: $(TZ=Asia/Shanghai date +'%Y-%m-%d %H:%M:%S %z %Z')" >> Moyu_qx.list
+    - name: Merge files with custom header (with last-update line)
+        run: |
+        # 这里我们选择使用 Asia/Shanghai 时区（北京时间）。如果你想用 UTC，请把 TZ=Asia/Shanghai 改为 date -u
+        # 1) 生成 header（使用 > 覆盖旧文件）
+        echo "# Moyu_qx.list" > Moyu_qx.list
+        echo "# From: https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/QuantumultX" >> Moyu_qx.list
+        # 写入“最后更新时间”这一行（每次运行会被更新为最新时间）
+        echo "# 最后更新时间: $(TZ=Asia/Shanghai date +'%Y-%m-%d %H:%M:%S %z %Z')" >> Moyu_qx.list
 
-# 2) 写入一些固定的规则（追加）
-echo "" >> Moyu_qx.list
-echo "HOST,keylol.com,DIRECT" >> Moyu_qx.list
-echo "HOST,sspai.com,DIRECT" >> Moyu_qx.list
-echo "HOST,www.163.com,DIRECT" >> Moyu_qx.list
-echo "HOST-SUFFIX,chongbuluo.com,DIRECT" >> Moyu_qx.list
-echo "HOST-SUFFIX,douyin.com,DIRECT" >> Moyu_qx.list
-echo "HOST-SUFFIX,huxiu.com,DIRECT" >> Moyu_qx.list
-echo "HOST-SUFFIX,jandan.net,DIRECT" >> Moyu_qx.list
-echo "HOST-SUFFIX,kdslife.com,DIRECT" >> Moyu_qx.list
-echo "HOST-SUFFIX,tophub.today,DIRECT" >> Moyu_qx.list
-echo "" >> Moyu_qx.list
+        # 2) 写入一些固定的规则（追加）
+        echo "" >> Moyu_qx.list
+        echo "HOST,keylol.com,DIRECT" >> Moyu_qx.list
+        echo "HOST,sspai.com,DIRECT" >> Moyu_qx.list
+        echo "HOST,www.163.com,DIRECT" >> Moyu_qx.list
+        echo "HOST-SUFFIX,chongbuluo.com,DIRECT" >> Moyu_qx.list
+        echo "HOST-SUFFIX,douyin.com,DIRECT" >> Moyu_qx.list
+        echo "HOST-SUFFIX,huxiu.com,DIRECT" >> Moyu_qx.list
+        echo "HOST-SUFFIX,jandan.net,DIRECT" >> Moyu_qx.list
+        echo "HOST-SUFFIX,kdslife.com,DIRECT" >> Moyu_qx.list
+        echo "HOST-SUFFIX,tophub.today,DIRECT" >> Moyu_qx.list
+        echo "" >> Moyu_qx.list
 
-# 3) 将下载的各个 yaml 内容追加到最终文件
-cat 36kr.list BiliBili.list DouBan.list DouYin.list Hupu.list HuYa.list JingDong.list NGA.list SMZDM.list TianYaForum.list Weibo.list Zhihu.list >> Moyu_qx.list
+        # 3) 将下载的各个 yaml 内容追加到最终文件
+        cat 36kr.list BiliBili.list DouBan.list DouYin.list Hupu.list HuYa.list JingDong.list NGA.list SMZDM.list TianYaForum.list Weibo.list Zhihu.list >> Moyu_qx.list
 
-- name: Commit and push Moyu_qx.list
-env:
-GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-run: |
-# 配置提交信息
-git config user.name "github-actions[bot]"
-git config user.email "github-actions[bot]@users.noreply.github.com"
-git add Moyu_qx.list
-# 只有在有变更时才提交（时间戳或内容变化都会触发提交）
-if ! git diff --cached --quiet; then
-git commit -m "Daily merge YAMLs: $(TZ=Asia/Shanghai date +'%Y-%m-%d %H:%M:%S %z')"
-git push origin HEAD:main
-else
-echo "No changes, skipping commit."
-fi
+    - name: Commit and push Moyu_qx.list
+        env:
+            GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+            # 配置提交信息
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add Moyu_qx.list
+            # 只有在有变更时才提交（时间戳或内容变化都会触发提交）
+            if ! git diff --cached --quiet; then
+                git commit -m "Daily merge YAMLs: $(TZ=Asia/Shanghai date +'%Y-%m-%d %H:%M:%S %z')"
+                git push origin HEAD:main
+            else
+                echo "No changes, skipping commit."
+            fi
