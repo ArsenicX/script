@@ -102,7 +102,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
           # 添加改变（同时提交 Moyu_clash.list 和 workflow 文件的变更）
-          git add Moyu_clash.list .github/workflows/daily-merge.yml
+          git add Moyu_clash.list .github/workflows/merge_Moyu_clash.yml
 
           # 只有在有变更时才 commit & push
           if ! git diff --cached --quiet; then
