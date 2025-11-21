@@ -20,12 +20,15 @@ jobs:
                 curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/BiliBili/BiliBili.list -o BiliBili.list
                 curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/DouBan/DouBan.list -o DouBan.list
                 curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/DouYin/DouYin.list -o DouYin.list
+                curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/GaoDe/GaoDe.list -o GaoDe.list
                 curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Hupu/Hupu.list -o Hupu.list
                 curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/HuYa/HuYa.list -o HuYa.list
                 curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/JingDong/JingDong.list -o JingDong.list
+                curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/MeiTuan/MeiTuan.list -o MeiTuan.list
                 curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/NGA/NGA.list -o NGA.list
                 curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/SMZDM/SMZDM.list -o SMZDM.list
                 curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/TianYaForum/TianYaForum.list -o TianYaForum.list
+                curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/XiaoHongShu/XiaoHongShu.list -o XiaoHongShu.list
                 curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Weibo/Weibo.list -o Weibo.list
                 curl -sfL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Zhihu/Zhihu.list -o Zhihu.list
 
@@ -40,19 +43,20 @@ jobs:
 
                 # 2) 写入一些固定的规则（追加）
                 echo "" >> Moyu_qx.list
-                echo "HOST,keylol.com,DIRECT" >> Moyu_qx.list
-                echo "HOST,sspai.com,DIRECT" >> Moyu_qx.list
-                echo "HOST,www.163.com,DIRECT" >> Moyu_qx.list
-                echo "HOST-SUFFIX,chongbuluo.com,DIRECT" >> Moyu_qx.list
-                echo "HOST-SUFFIX,douyin.com,DIRECT" >> Moyu_qx.list
-                echo "HOST-SUFFIX,huxiu.com,DIRECT" >> Moyu_qx.list
-                echo "HOST-SUFFIX,jandan.net,DIRECT" >> Moyu_qx.list
-                echo "HOST-SUFFIX,kdslife.com,DIRECT" >> Moyu_qx.list
-                echo "HOST-SUFFIX,tophub.today,DIRECT" >> Moyu_qx.list
+                echo "HOST,keylol.com" >> Moyu_qx.list
+                echo "HOST,sspai.com" >> Moyu_qx.list
+                echo "HOST,www.163.com" >> Moyu_qx.list
+                echo "HOST-SUFFIX,chongbuluo.com" >> Moyu_qx.list
+                echo "HOST-SUFFIX,douyin.com" >> Moyu_qx.list
+                echo "HOST-SUFFIX,huxiu.com" >> Moyu_qx.list
+                echo "HOST-SUFFIX,jandan.net" >> Moyu_qx.list
+                echo "HOST-SUFFIX,kdslife.com" >> Moyu_qx.list
+                echo "HOST-SUFFIX,tophub.today" >> Moyu_qx.list
+                echo "HOST-SUFFIX,zhipin.com" >> Moyu_qx.list
                 echo "" >> Moyu_qx.list
 
                 # 3) 将下载的各个 yaml 内容追加到最终文件
-                cat 36kr.list BiliBili.list DouBan.list DouYin.list Hupu.list HuYa.list JingDong.list NGA.list SMZDM.list TianYaForum.list Weibo.list Zhihu.list >> Moyu_qx.list
+                cat 36kr.list BiliBili.list DouBan.list DouYin.list GaoDe.list Hupu.list HuYa.list JingDong.list MeiTuan.list NGA.list SMZDM.list TianYaForum.list XiaoHongShu.list Weibo.list Zhihu.list >> Moyu_qx.list
 
             - name: Commit and push Moyu_qx.list
               env:
