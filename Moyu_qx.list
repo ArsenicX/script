@@ -1,16 +1,17 @@
 # Moyu_qx.list
 # From: https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/QuantumultX
-# 最后更新时间: 2025-11-21 09:01:13 +0800 CST
+# 最后更新时间: 2025-11-22 08:59:14 +0800 CST
 
-HOST,keylol.com,DIRECT
-HOST,sspai.com,DIRECT
-HOST,www.163.com,DIRECT
-HOST-SUFFIX,chongbuluo.com,DIRECT
-HOST-SUFFIX,douyin.com,DIRECT
-HOST-SUFFIX,huxiu.com,DIRECT
-HOST-SUFFIX,jandan.net,DIRECT
-HOST-SUFFIX,kdslife.com,DIRECT
-HOST-SUFFIX,tophub.today,DIRECT
+HOST,keylol.com
+HOST,sspai.com
+HOST,www.163.com
+HOST-SUFFIX,chongbuluo.com
+HOST-SUFFIX,douyin.com
+HOST-SUFFIX,huxiu.com
+HOST-SUFFIX,jandan.net
+HOST-SUFFIX,kdslife.com
+HOST-SUFFIX,tophub.today
+HOST-SUFFIX,zhipin.com
 
 # NAME: 36kr
 # AUTHOR: blackmatrix7
@@ -187,6 +188,21 @@ HOST-SUFFIX,ixiguavideo.com,DouYin
 HOST-SUFFIX,pstatp.com,DouYin
 HOST-SUFFIX,snssdk.com,DouYin
 HOST-SUFFIX,toutiao.com,DouYin
+# NAME: GaoDe
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2025-06-06 09:17:34
+# HOST-SUFFIX: 9
+# TOTAL: 9
+HOST-SUFFIX,a-map.cn,GaoDe
+HOST-SUFFIX,a-map.co,GaoDe
+HOST-SUFFIX,a-map.link,GaoDe
+HOST-SUFFIX,a-map.vip,GaoDe
+HOST-SUFFIX,amap.com,GaoDe
+HOST-SUFFIX,amapauto.com,GaoDe
+HOST-SUFFIX,anav.com,GaoDe
+HOST-SUFFIX,autonavi.com,GaoDe
+HOST-SUFFIX,gaode.com,GaoDe
 # NAME: Hupu
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
@@ -469,6 +485,19 @@ HOST-SUFFIX,yihaomall.com,JingDong
 HOST-SUFFIX,yixun.com,JingDong
 HOST-SUFFIX,yiyaojd.com,JingDong
 HOST-SUFFIX,yizhitou.com,JingDong
+# NAME: MeiTuan
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2025-06-06 09:17:36
+# HOST-SUFFIX: 7
+# TOTAL: 7
+HOST-SUFFIX,dianping.com,MeiTuan
+HOST-SUFFIX,maoyan.com,MeiTuan
+HOST-SUFFIX,meituan.com,MeiTuan
+HOST-SUFFIX,meituan.net,MeiTuan
+HOST-SUFFIX,mtyun.com,MeiTuan
+HOST-SUFFIX,neixin.cn,MeiTuan
+HOST-SUFFIX,sankuai.com,MeiTuan
 # NAME: NGA
 # AUTHOR: ameyukisora
 # REPO: https://github.com/ameyukisora/Clash-Rule
@@ -513,6 +542,16 @@ HOST-SUFFIX,tianyablog.com,TianYaForum
 HOST-SUFFIX,tianyaclub.com,TianYaForum
 HOST-SUFFIX,tianyaui.com,TianYaForum
 HOST-SUFFIX,tysurl.com,TianYaForum
+# NAME: XiaoHongShu
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2025-06-06 09:18:50
+# HOST-SUFFIX: 4
+# TOTAL: 4
+HOST-SUFFIX,fengkongcloud.com,XiaoHongShu
+HOST-SUFFIX,xhscdn.com,XiaoHongShu
+HOST-SUFFIX,xhscdn.net,XiaoHongShu
+HOST-SUFFIX,xiaohongshu.com,XiaoHongShu
 # NAME: Weibo
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
